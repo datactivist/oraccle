@@ -1,0 +1,445 @@
+---
+title: "Les étapes de l'ouverture des données"
+subtitle: "L'open data pipeline"
+author: "Samuel Goëta, Anne-Laure Donzel, Antoine Blanchard -- Datactivist"
+date: "`r format(Sys.Date(), '%d %b %Y')`"
+output:
+  SlidesDatactivist::moon_reader:
+    css: [default, datactivist, datactivist-fonts]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      beforeInit: ["macros.js", "matomo.js", "https://platform.twitter.com/widgets.js"]
+params:
+  event: Formation "open data pipeline"
+  slug: oraccle
+  title: Les étapes de l'ouverture des données
+
+---
+layout: true
+  
+
+`r paste0("<div class='my-footer'><span>", params$event, "</span> <center><div class=logo><img src='https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/fond_noir_monochrome.png' width='0px'></center></span></div>")` 
+
+
+---
+
+class: center, middle
+
+Ces slides en ligne : `r paste0("http://datactivist.coop/", params$slug)`
+
+Sources : `r paste0("https://github.com/datactivist/", params$slug)`
+
+
+Les productions de Datactivist sont librement réutilisables selon les termes de la licence [Creative Commons 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode.fr).
+
+<BR>
+<BR>
+
+.reduite[![](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)]
+
+
+---
+
+<img src='https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/logo.png' width='320px'>
+
+### We .red[open data], we make them .red[useful]
+
+.reduite.center[![](./img/team.jpg)]
+
+---
+## Qui sommes nous ?
+
+- Datactivist est un .red[**pure player de l’open data**] créé en 2016, par Samuel Goëta et Joël Gombin.
+
+- Se positionnant sur .red[**toutes les étapes du travail d’ouverture des données**], Datactivist travaille tant avec les producteurs de données qu’avec les réutilisateurs et participe à l’appropriation des données par chacun.
+
+- Nous appliquons nos propres .red[**valeurs**] : nous sommes une coopérative ; nos supports de formation et nos contenus sont librement réutilisables, publiés en licence Creative Commons.
+
+- Une approche issue de la recherche : voir notamment **https://datactivist.coop/these**. 
+
+- Nous animons la communauté [#TeamOpenData](https://teamopendata.org).
+
+---
+## Nos activités
+
+- Conseil sur les .red[**stratégies d’ouverture de données**] : nous aidons les organisations dans la conception et la mise en œuvre de leur stratégie d’ouverture de données.
+
+
+- .red[**Accompagnement dans la réutilisation de données ouvertes**] : nous aidons les organisations à utiliser les données au quotidien. 
+
+- .red[**Sensibilisation et formation à la donnée**] : nous formons à la culture générale des données, nous enseignons les grands principes et bonnes pratiques de l'open data et nous introduisons à la data science. 
+
+- .red[**Médiation de données**] : nous organisons des hackathons, des open data camps, des expéditions de données...
+
+???
+
+La médiation de données est aussi fondamentalement une animation de communauté(s). 
+
+---
+## Notre vision
+
+### D'un open data de l'offre à un .red[open data de la demande]
+
+Aujourd’hui, les administrations choisissent les données à ouvrir, elles décident du quand et du comment .red[**sans consulter les usagers**].
+
+Les rares données ouvertes sont souvent décevantes : pas à jour, trop agrégées, mal documentées, mal formatées, parfois inutilisables. 
+
+Il faut aujourd’hui passer à l’étape supérieure : .red[**un open data piloté par la demande**].
+
+Mais c'est difficile : demande peu visible, pas de possibilité de soumettre la communication des données à l'expression d'une demande. Leviers : demandes d'ouverture, plateformes, animations (ex : hackathon), gouvernance partagée... 
+
+---
+### Objectifs de la séance
+
+* Connaître les huit étapes de l’open data pipeline
+
+* Savoir illustrer chaque étape par des exemples concrets
+
+* Savoir identifier les objectifs, les enjeux, et les rôles impliqués à chaque étape
+
+--
+
+### Autres formations au programme
+Voir http://datactivist.coop/oraccle
+
+---
+class: middle, center
+
+### Avant de commencer
+
+## Présentons nous
+
+![](img/pdr.png)
+
+.footnote[[Public Domain Review](https://publicdomainreview.org/collection/engravings-from-a-french-ice-skating-manual-1813)]
+
+---
+### Open data pipeline : les principales étapes de l'ouverture
+
+.reduite.center[
+![](./img/logigramme.png)
+]
+
+---
+### .red[Identifier]
+
+.pull-left[
+![](./img/identifier.png)
+]
+
+.pull-right[
+* Rencontrer les agents
+
+* Etudier les données ouvertes par d'autres collectivités
+
+* Cartographier les données
+
+* Documenter les données
+
+]
+
+---
+### L’inventaire : un processus au long cours
+
+.pull-left[
+[![](./img/iden_etalab.png)](https://www.data.gouv.fr/fr/datasets/recensement-indicatif-des-donnees-publiques-issues-des-services-publics-de-letat/)
+]
+.pull-right[
+* L’utopie de l’inventaire exhaustif
+
+
+* Une démarche progressive et exploratoire
+
+
+* Question : comment qualifier les données ?
+
+
+* A lier aux processus de plan d’occupation des sols des DSI
+
+]
+---
+### Les tableaux de gestion des archivistes comme support à l'identification 
+
+![](./img/tableaugestion.png)
+
+---
+
+### S'appuyer sur le recensement pour connaître données ouvrables
+
+[![](./img/recen.gif)](https://medium.com/datactivist/qui-a-ouvert-quoi-le-recensement-des-donn%C3%A9es-des-villes-est-maintenant-ouvert-b7f697135c1f)
+
+Il y a 2 grandes familles de données dans les services d'archives :
+
+* Les ![données d'activité du service](https://www.data.gouv.fr/fr/datasets/les-entrees-darchives-aux-archives-nationales/) (registre des entrées, indicateurs d'activité...)
+
+* Les ![données liées aux fonds conservés](https://trouver.datasud.fr/dataset/marseille-photographies/resource/6401b5d4-28ce-467b-8cff-ffa96a1312bc) : description + images
+
+---
+### .red[Valider]
+
+.pull-left[
+![](./img/valider.png)
+]
+
+.pull-right[
+* Evaluer les jeux de données
+
+* Prioriser l’ouverture 
+
+* Valider l’ouverture par la hiérarchie
+
+]
+
+---
+### Quelques “bonnes raisons organisationnelles” de ne pas ouvrir des données
+
+* Des données encastrées dans les systèmes d’information : explorer les bases de données, reconstruire les schémas et extraire les données
+
+
+* Des données qui peuvent servir à des usagers malveillants : prévoir les risques et les dangers de l’ouverture
+
+
+* Des données qui n’ont pas été pensées pour l’ouverture : améliorer leur qualité et leur intelligibilité 
+
+
+* Des données trop “sensibles” pour être ouvertes : la transparence, un mandat à obtenir 
+
+---
+### .red[Éditer]
+
+.pull-left[
+![](./img/editer.png)
+]
+
+.pull-right[
+_data editing_: les opérations par lesquelles les statisticiens traitent et transforment les données issues des sources administratives (Desrosières 2005) 
+
+* [Anonymiser](https://datascience.etalab.studio/pseudo/) des données 
+
+* Enlever la sensibilité de données qui ne pouvaient pas être publiées
+
+* Rendre intelligible les acronymes 
+
+* Améliorer la qualité des données
+
+]
+
+---
+### [Dataproofer](http://dataproofer.org/) : un outil de contrôle automatique de la qualité
+
+![](./img/dataproofer.png)
+---
+### [WTFCSV](https://databasic.io/en/wtfcsv/) pour prévisualiser et contrôler un jeu de données
+
+![](./img/wtfcsv.png)
+---
+### .red[Standardiser]
+
+.pull-left[
+![](./img/standardiser.png)
+]
+
+.pull-right[
+* Convertir les données dans un format ouvert (spécifications techniques publiques et sans restriction d'accès ni de mise en œuvre) et lisible par les machines
+
+* Adopter des spécifications partagées : GTFS, DECP, IATI, OCDS, socle commun des données locales…
+
+* Transformer les données
+
+.red[Bonne nouvelle : il existe désormais un standard pour la publication des registres d'entrées d'archives!]
+
+]
+
+---
+
+### Pourquoi ce standard?
+
+* De nombreux services avaient publié leurs entrées mais...
+
+![](img/standard.png)
+
+---
+
+### Besoin d'un standard!
+
+* Le standard de données fournit un cadre commun pour l'ensemble des structures souhaitant diffuser leurs données
+
+* Le standard a été réalisé par le SIAF et l'AAF, qui a mobilisé le réseau sur le sujet
+
+* Il va permettre de structurer les données avant de les publier sur une plateforme open data ou le site internet d'une institution
+
+Le schéma sur le [site de l'AAF]( https://www.archivistes.org/Ressources-Registres-des-entrees) et sur le site [schema.data.gouv](https://schema.data.gouv.fr/Archivistes75/registre_entrees/latest.html)
+
+---
+
+### Les limites du standard
+
+* **Il ne concerne que les registres d'entrées**, les services d'archives gèrent et produisent de nombreuses autres données
+
+* **Il peut nécessiter un certain travail de préparation et de nettoyage** des fichiers. Un travail est en cours avec les éditeurs de SIA pour qu'il soit implémenté dans les logiciels archives
+
+* **Il n'est pas obligatoire**, les services doivent donc faire la démarche de l'utiliser
+
+---
+### .red[Publier]
+
+.pull-left[
+![](./img/publier.png)
+]
+
+.pull-right[
+* Importer les données sur le portail
+
+* Décrire les champs du fichier
+
+* Documenter les métadonnées
+]
+
+Les métadonnées permettent d'éviter d'avoir un [jeu de données mal documenté](https://www.data.gouv.fr/fr/datasets/c2020-sbep-028/#_).
+
+
+---
+### [Datasheet for Datasets](https://teamopendata.org/t/traduction-et-adaptation-du-modele-de-description-des-donnees-datasheet-for-datasets/1400) : un modèle de documentation des données
+
+.reduite.center[
+![](./img/datasheet.png)]
+
+
+---
+### .red[Mettre à jour]
+
+.pull-left[
+![](./img/update.png)
+]
+
+.pull-right[
+
+* Mettre à jour manuellement ou automatiser l’ouverture
+
+* Conserver les données
+
+* Prendre en compte les retours des usagers
+
+]
+
+---
+
+### Quelques points clés
+
+* **Obtenir un soutien au plus haut niveau**
+
+.reduite.center[![](img/matricefreinmoteur.png)]
+
+* **Faciliter la découverte et l’utilisation des données**
+
+["La déception en 4 actes"](https://twitter.com/JulesGrandin/status/935838409809125376)
+
+---
+
+### Les 10 commandements 
+
+![](img/10commandements.png)
+
+---
+
+### Mais que peut-on ouvrir?
+
+* [Les données d'activités du service](https://data.culture.gouv.fr/explore/dataset/activite-des-services-darchives-en-france/table/) 
+
+* [Les données produites concernant les fonds](https://www.data.gouv.fr/fr/datasets/les-denaturalises-de-vichy/)
+
+* Les données produites dans le cadre de travaux d'indexation collaborative : [Archives Municipales d'Orléans](https://archives.orleans-metropole.fr/annotation-collaborative/chercher-dans-les-annotations/actes-dengagement-militaire?arko_default_603f6a6b6d272--ficheFocus=) ou [SHD](https://www.memoiredeshommes.sga.defense.gouv.fr/fr/article.php?laref=1380&titre=telechargement)
+
+---
+
+### De l'open data à l'open content
+
+* L'open content c'est **l'ouverture des contenus**
+
+![](img/OpenContent.png)
+
+---
+
+### Offrir la possibilité de s'amuser
+
+[Carte à partir des images en open data (et avec du contenu ouvert!) des Archives Municipales des Marseille](https://umap.openstreetmap.fr/fr/map/carte-des-photos-en-open-data-des-am-de-marseille_628303#13/43.2903/5.3788)
+
+![](img/Marseille_carte.png)
+
+---
+### Les bénéfices de l'open data
+
+.pull-left[
+![](./img/obs.png)
+]
+.pull-right[
+En petits groupes, analysez les [données brutes](https://docs.google.com/spreadsheets/d/1gLSCGwmuUeV2d-gbgsgyRUSuMihRvEvzOIvU9x2Nd1g/edit?usp=sharing) et synthétisez  : 
+* La production d’effets bénéfiques ou d’externalités positives
+* L'optimisation de la collecte et du partage des données
+* L'amélioration de la qualité des données
+* La production d'effets négatifs ou d'impacts contre-productifs
+]
+---
+
+### Annexe méthodologique : Passage en CSV : bien plus que “enregistrer sous”
+
+.red[**À ne pas faire n°1 :] une première ligne qui ne correspond pas à un champ précis**
+
+![](img/reglecsv1.png)
+
+---
+
+###  Annexe méthodologique : Passage en CSV : bien plus que “enregistrer sous”
+
+.red[**À ne pas faire n°2 :] mettre en forme les cellules**
+
+![](img/reglecsv2.png)
+
+---
+
+###  Annexe méthodologique : Passage en CSV : bien plus que “enregistrer sous”
+
+.red[**À ne pas faire n°3 :]insérer deux données de nature différente (ou deux objets) sur une même ligne**
+
+![](img/reglecsv3.png)
+---
+###  Annexe méthodologique : Passage en CSV : bien plus que “enregistrer sous”
+
+.red[**À ne pas faire n°4 :] fusionner des cellules**
+
+![](img/reglecsv4.png)
+
+---
+
+###  Annexe méthodologique : Passage en CSV : bien plus que “enregistrer sous”
+
+.red[**À ne pas faire n°5 :] séparer les tableaux dans des onglets différents ou dans une même feuille**
+
+![](img/reglecsv5.png)
+
+---
+
+###  Annexe méthodologique : Passage en CSV : bien plus que “enregistrer sous”
+
+.red[**À ne pas faire n°6 :] afficher des totaux ou des informations génériques, ou des données qui n’ont pas de lien avec ce jeu de données précis**
+
+![](img/reglecsv6.png)
+
+---
+
+###  Annexe méthodologique : Passage en CSV : bien plus que “enregistrer sous”
+
+.red[**À faire!**] 
+
+![](img/reglecsv7.png)
+
+---
+
+class: inverse, center, middle
+
+# Merci !
+
+Contact : [samuel@datactivist.coop](mailto:samuel@datactivist.coop) [annelaure@datactivist.coop](mailto:annelaure@datactivist.coop)
