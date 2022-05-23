@@ -4,6 +4,7 @@ est un projet unique dédié à faciliter le continuum bac-3/bac+3 en Ile-de-Fra
 ![](./img/oraccle_logo.png)
 
 Le consortium du projet a confié à Datactivist le soin de sensibiliser et former les membres du projet à l'open data.
+
 ***
 
 # Programme
