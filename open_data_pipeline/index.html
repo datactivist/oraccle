@@ -4,7 +4,7 @@
     <title>Les étapes de l’ouverture des données</title>
     <meta charset="utf-8" />
     <meta name="author" content="Samuel Goëta, Anne-Laure Donzel, Antoine Blanchard – Datactivist" />
-    <meta name="date" content="2022-05-23" />
+    <meta name="date" content="2022-05-25" />
     <script src="libs/header-attrs-2.14/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/datactivist.css" rel="stylesheet" />
@@ -17,7 +17,7 @@ class: center, middle, inverse, title-slide
 # Les étapes de l’ouverture des données
 ## L’open data pipeline
 ### Samuel Goëta, Anne-Laure Donzel, Antoine Blanchard – Datactivist
-### 23 May 2022
+### 25 May 2022
 
 ---
 
@@ -129,20 +129,28 @@ class: middle, center
 ---
 ### .red[Identifier]
 
+#### Explorer l'organisation à la recherche de données "ouvrables"
+
 .pull-left[
 ![](./img/identifier.png)
 ]
-
+--
 .pull-right[
-* Rencontrer les agents
+**Quels acteurs clés ?**
 
-* Etudier les données ouvertes par d'autres collectivités
+**Missions :**
+* Rencontrer les agents
 
 * Cartographier les données
 
 * Documenter les données
-
 ]
+
+???
+Acteurs clés :
+* Chef de projet open data
+* Référents open data
+* Producteurs de données
 
 ---
 ### L’inventaire : un processus au long cours
@@ -160,25 +168,43 @@ class: middle, center
 * Question : comment qualifier les données ?
 
 
-* A lier aux processus de plan d’occupation des sols des DSI
+* À lier au schéma d'urbanisation du SI
 
 ]
+
+???
+
+**Une démarche progressive et exploratoire** : commencer par les jeux de données les plus évidents, mais se donner dès le début les champs à renseigner (sinon on va devoir courir après l'info à chaque ajout de colonne). 
+**Question : comment qualifier les données ?** Choisir le bon niveau de détail, s'appuyer sur des nomenclatures (par ex. aux Douanes il y a de gros enjeux de sécurité à documenter), ne pas mettre trop de champ pour que ça reste faisable
 ---
-### Les tableaux de gestion des archivistes comme support à l'identification 
 
-![](./img/tableaugestion.png)
+### S'appuyer sur le recensement pour connaître les données ouvrables
+
+.pull-left[
+[![](./img/Carto_donnees.jpg)](https://www.banquedesterritoires.fr/sites/default/files/2021-02/Note%20de%20lecture_carto_0.pdf)
+]
+
+.pull-right[
+[![](./img/Cartographie_CDC.gif)](https://airtable.com/shrgaLtdXiBqLcxil/tblyOG4ZvIetvxnIm/viwvWCRk4dLJ7SvqZ)
+]
+
+???
+
+Filtrer la verticale métier "Education"
 
 ---
+### Un temps fort : la journée "Identification et évaluation des gisements de données"
 
-### S'appuyer sur le recensement pour connaître données ouvrables
+**Objectif** :
 
-[![](./img/recen.gif)](https://medium.com/datactivist/qui-a-ouvert-quoi-le-recensement-des-donn%C3%A9es-des-villes-est-maintenant-ouvert-b7f697135c1f)
+&gt; évaluer le besoin en données du projet Oraccle, en caractérisant les données qui sont nécessaires à l’atteinte de ses objectifs — aussi bien celles qui sont disponibles au sein des établissements membres du projet que celles qui sont publiées par d’autres en open data ou qu’il faudra obtenir par différents moyens
 
-Il y a 2 grandes familles de données dans les services d'archives :
+**Résultats attendus** :
 
-* Les ![données d'activité du service](https://www.data.gouv.fr/fr/datasets/les-entrees-darchives-aux-archives-nationales/) (registre des entrées, indicateurs d'activité...)
+* “Wanted Data List” listant les données nécessaires au projet
+* Recensement et évaluation des jeux de données ouverts ou disponibles en interne
+* “Plan de route données” pour déterminer la meilleure stratégie permettant d’obtenir les jeux de données souhaités, et les prochaines actions à mener
 
-* Les ![données liées aux fonds conservés](https://trouver.datasud.fr/dataset/marseille-photographies/resource/6401b5d4-28ce-467b-8cff-ffa96a1312bc) : description + images
 
 ---
 ### .red[Valider]
@@ -188,13 +214,22 @@ Il y a 2 grandes familles de données dans les services d'archives :
 ]
 
 .pull-right[
+**Quels acteurs clés ?**
+
+**Missions :**
 * Evaluer les jeux de données
 
-* Prioriser l’ouverture 
+* Prioriser l’ouverture (stratégie)
 
-* Valider l’ouverture par la hiérarchie
-
+* Valider l’ouverture (par la hiérarchie)
 ]
+
+???
+Importance de la validation pour obtenir le soutien politique.
+
+Acteurs clés :
+* Equipe projet open data
+* Elus
 
 ---
 ### Quelques “bonnes raisons organisationnelles” de ne pas ouvrir des données
@@ -205,10 +240,62 @@ Il y a 2 grandes familles de données dans les services d'archives :
 * Des données qui peuvent servir à des usagers malveillants : prévoir les risques et les dangers de l’ouverture
 
 
-* Des données qui n’ont pas été pensées pour l’ouverture : améliorer leur qualité et leur intelligibilité 
+* Des données qui n’ont pas été pensées pour l’ouverture : améliorer leur qualité et leur intelligibilité
 
 
 * Des données trop “sensibles” pour être ouvertes : la transparence, un mandat à obtenir 
+
+???
+
+Données encastrées dans les systèmes d’information : raison technique, associer la DSI etc.
+
+1% d'usages malveillants rapportés dans l'enquête de l'Agence Phare sur l'open content pour Wikimedia France, alors que le chiffre *attendu* aurait sans doute été plus élevé
+
+Exemple de données trop sensibles : l'emplacement des imprimantes !!
+
+---
+### Un temps fort : la journée "Prototypage d’un projet data"
+
+**Objectif** :
+
+&gt; acquérir les bons réflexes de questionnements et les bonnes pratiques liés à l’utilisation des données
+
+**Outil utilisé** : la grille d'évaluation d'un jeu de données
+
+.reduite.center[
+![](./img/grille_evaluation.png)
+]
+
+---
+### .red[Extraire]
+
+.pull-left[
+![](./img/extraire.png)
+]
+
+.pull-right[
+**Quels acteurs clés ?**
+
+**Missions :**
+* Négocier avec les prestataires
+
+* Comprendre l’organisation physique des données
+
+* Développer des outils d’extraction
+
+]
+
+---
+### Exemple de la base de données Apogée
+
+.reduite.center[
+[![](./img/Apogee.png)](https://dumas.ccsd.cnrs.fr/dumas-01143133/)
+]
+
+???
+
+Outil de gestion de la scolarité dans les universités françaises. L’organisation physique des données peut avoir une structure et un nommage très différents de ce qui est exposé dans les vues utilisateurs.  Or, l’organisation physique des données peut avoir un nommage très différent ce qui peut compliquer l’ouverture. 
+
 
 ---
 ### .red[Éditer]
@@ -218,7 +305,6 @@ Il y a 2 grandes familles de données dans les services d'archives :
 ]
 
 .pull-right[
-_data editing_: les opérations par lesquelles les statisticiens traitent et transforment les données issues des sources administratives (Desrosières 2005) 
 
 * [Anonymiser](https://datascience.etalab.studio/pseudo/) des données 
 
@@ -229,6 +315,12 @@ _data editing_: les opérations par lesquelles les statisticiens traitent et tra
 * Améliorer la qualité des données
 
 ]
+
+???
+
+_data editing_: les opérations par lesquelles les statisticiens traitent et transforment les données issues des sources administratives (Desrosières 2005)
+
+DCP : toute information relative à une personne physique susceptible d'être identifiée, directement ou indirectement.
 
 ---
 ### [Dataproofer](http://dataproofer.org/) : un outil de contrôle automatique de la qualité
@@ -455,7 +547,8 @@ Contact : [samuel@datactivist.coop](mailto:samuel@datactivist.coop) [annelaure@d
 <script>var slideshow = remark.create({
 "highlightStyle": "github",
 "highlightLines": true,
-"countIncrementalSlides": false
+"countIncrementalSlides": false,
+"anchor_sections": false
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
