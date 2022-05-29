@@ -4,7 +4,7 @@
     <title>Les étapes de l’ouverture des données</title>
     <meta charset="utf-8" />
     <meta name="author" content="Samuel Goëta, Anne-Laure Donzel, Antoine Blanchard – Datactivist" />
-    <meta name="date" content="2022-05-25" />
+    <meta name="date" content="2022-05-29" />
     <script src="libs/header-attrs-2.14/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/datactivist.css" rel="stylesheet" />
@@ -17,7 +17,7 @@ class: center, middle, inverse, title-slide
 # Les étapes de l’ouverture des données
 ## L’open data pipeline
 ### Samuel Goëta, Anne-Laure Donzel, Antoine Blanchard – Datactivist
-### 25 May 2022
+### 29 May 2022
 
 ---
 
@@ -43,6 +43,9 @@ Les productions de Datactivist sont librement réutilisables selon les termes de
 
 .reduite[![](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)]
 
+???
+
+A ouvrir sur votre PC pour pouvoir suivre les liens
 
 ---
 
@@ -249,9 +252,11 @@ Acteurs clés :
 
 Données encastrées dans les systèmes d’information : raison technique, associer la DSI etc.
 
-1% d'usages malveillants rapportés dans l'enquête de l'Agence Phare sur l'open content pour Wikimedia France, alors que le chiffre *attendu* aurait sans doute été plus élevé
+1% d'usages malveillants rapportés dans l'enquête de l'Agence Phare sur l'open content pour Wikimedia France, alors que le chiffre *attendu* aurait sans doute été plus élevé ; autre ex. : les pavoisements de la ville de Paris, ou les terrains vagues 
 
-Exemple de données trop sensibles : l'emplacement des imprimantes !!
+Exemple de données trop sensibles : les demandes de logement, les collections botaniques des serres d'Auteuil au moment de leur déménagement, les salaires, les taux d'absentéisme
+
+Ccl : ce ne sont pas toujours les agents qui s'opposent à l'ouverture des données
 
 ---
 ### Un temps fort : la journée "Prototypage d’un projet data"
@@ -285,6 +290,11 @@ Exemple de données trop sensibles : l'emplacement des imprimantes !!
 
 ]
 
+???
+
+Gestionnaires de données = database managers qui ont pour mission de déployer et
+de maintenir les systèmes d’information de leur institution
+
 ---
 ### Exemple de la base de données Apogée
 
@@ -294,8 +304,18 @@ Exemple de données trop sensibles : l'emplacement des imprimantes !!
 
 ???
 
-Outil de gestion de la scolarité dans les universités françaises. L’organisation physique des données peut avoir une structure et un nommage très différents de ce qui est exposé dans les vues utilisateurs.  Or, l’organisation physique des données peut avoir un nommage très différent ce qui peut compliquer l’ouverture. 
+Outil de gestion de la scolarité dans les universités françaises. L’organisation physique des données peut avoir une structure et un nommage très différents de ce qui est exposé dans les vues utilisateurs. Or, l’organisation physique des données peut avoir un nommage très différent ce qui peut compliquer l’ouverture. 
 
+---
+### Exemple de clause de sous-traitance
+
+.reduite.pull-left[
+[![](./img/Guide_bpc.png)](https://www.banquedesterritoires.fr/sites/default/files/2021-01/20-211-BDT-Guide%20des%20bonnes%20pratiques%20contractuelles%20-%20web.pdf)
+]
+
+.pull-right[
+&gt; En vue de la mise à disposition à titre gratuit des informations publiques, le Délégataire/Titulaire fournira les outils permettant d’extraire et d'exploiter librement tout ou partie des données et bases de données.
+]
 
 ---
 ### .red[Éditer]
@@ -305,31 +325,84 @@ Outil de gestion de la scolarité dans les universités françaises. L’organis
 ]
 
 .pull-right[
+**Quels acteurs clés ?**
 
-* [Anonymiser](https://datascience.etalab.studio/pseudo/) des données 
+**Missions :**
+* Expliciter les données
 
-* Enlever la sensibilité de données qui ne pouvaient pas être publiées
+* Améliorer leur qualité
 
-* Rendre intelligible les acronymes 
-
-* Améliorer la qualité des données
-
+* Réduire les risques et éviter toute réidentification
 ]
 
 ???
 
-_data editing_: les opérations par lesquelles les statisticiens traitent et transforment les données issues des sources administratives (Desrosières 2005)
+L’édition désigne toutes les opérations qui consistent à modifier le contenu des données avant leur publication.
+
+Un poste de data editor a été créé en 2013 dans l’équipe d’Etalab.
 
 DCP : toute information relative à une personne physique susceptible d'être identifiée, directement ou indirectement.
+
+Réduire les risques : supprimer des champs sensibles
+
+---
+### La qualité, un préalable à l'ouverture ?
+
+Etalab considère que, puisque les données publiques sont déjà utilisées par l’administration pour ses missions de service public, elles peuvent être ouvertes sans que les gestionnaires ne se préoccupent de leur qualité : 
+
+&gt; « Les données publiques sont produites ou reçues dans le cadre d’une mission de service public. Elles sont donc généralement d’une qualité permettant le travail quotidien de l’administration et, en fonction de leur destination initiale, une utilisation statistique pertinente. […] Toutefois, les grands systèmes d’information de l’État et des collectivités territoriales, tout comme ceux des entreprises, peuvent parfois comporter des erreurs. L’existence de ces erreurs ne doit pas ralentir la démarche d’ouverture et de partage des données publiques. L’ouverture et le dialogue avec les réutilisateurs favorisent le signalement d’erreurs éventuelles. »
+
+???
+
+Mais, en pratique, lorsqu’ils réclament l’ouverture d’un jeu de données, les
+responsables de projet open data ne peuvent pas simplement balayer de la main la question
+de la qualité : les agents ne cessent de s’interroger sur la présence possible d’erreurs et d’inexactitudes dans des données, qui pourraient rejaillir sur l’image du service et remettre en cause le professionnalisme de son travail.
 
 ---
 ### [Dataproofer](http://dataproofer.org/) : un outil de contrôle automatique de la qualité
 
 ![](./img/dataproofer.png)
+
+???
+
+Dataproofer pour les CSV ou Google Spreadsheets : cellules à compléter, doublons… Pénible car ne reconnaît pas l'UTF-8 (déclare des erreurs à chaque accent).
+
 ---
 ### [WTFCSV](https://databasic.io/en/wtfcsv/) pour prévisualiser et contrôler un jeu de données
 
 ![](./img/wtfcsv.png)
+
+---
+### Logigramme de l'anonymisation
+
+.reduite.center[
+![](./img/anonymisation.png)
+]
+
+???
+
+L'article D. 312-1-3 du CRPA prévoit les catégories de documents administratifs pouvant être rendus publics sans faire l'objet d'un processus d'anonymisation, par ex. les documents nécessaires à l'information du public relatifs aux conditions d'organisation de l'administration (organigrammes,  annuaires des administrations, liste des personnes inscrites à un tableau d'avancement ou sur une liste d'aptitude de la fonction publique)
+
+---
+### Anonymiser ou pseudonymiser ?
+
+La loi prévoit "un traitement permettant de rendre impossible l'identification de ces personnes" ; on parle aussi d'occultation.
+
+L'anonymisation comme la pseudonymisation répondent à cette exigence.
+
+&gt; Pour satisfaire à l’obligation d’occultation, **la CNIL préconise d’anonymiser les documents administratifs avant de les diffuser, garantissant ainsi une parfaite impossibilité de réidentification**. Néanmoins, […] **une complète anonymisation est difficile à atteindre et à évaluer et peut aboutir à une trop grande perte d’informations**.
+Il y a donc un arbitrage à faire entre la minimisation du risque de réidentification et la préserva‑
+tion de l’utilité des données. Trouver le bon curseur n’est pas simple et doit passer par une double
+analyse des risques de réidentification, à la fois juridique (pour évaluer par exemple quelles don‑
+nées ne doivent pas pouvoir être réidentifiées) et technique (pour estimer la possibilité technique
+de réidentifier ces données).
+
+— Etalab, *[Pseudonymiser des documents grâce à l’IA](https://guides.etalab.gouv.fr/pseudonymisation/pourquoi-comment/#qu-est-ce-que-la-pseudonymisation)*, Mars 2022
+
+???
+* DCP contenues dans un jeu de données tabulaire = supprimer les colonnes concernées ou chiffrer leur contenu
+* DCP dans du texte libre : suppression manuelle ou automatisation par les techniques de traitement du langage naturel cf. https://datascience.etalab.studio/pseudo/
+
 ---
 ### .red[Standardiser]
 
@@ -338,35 +411,112 @@ DCP : toute information relative à une personne physique susceptible d'être id
 ]
 
 .pull-right[
+**Quels acteurs clés ?**
+
+**Missions :**
 * Convertir les données dans un format ouvert (spécifications techniques publiques et sans restriction d'accès ni de mise en œuvre) et lisible par les machines
 
 * Adopter des spécifications partagées : GTFS, DECP, IATI, OCDS, socle commun des données locales…
 
 * Transformer les données
-
-.red[Bonne nouvelle : il existe désormais un standard pour la publication des registres d'entrées d'archives!]
-
 ]
 
+???
+
+Bien que le format XLSX a été standardisé par l’ISO, Regards Citoyens
+comme d’autres acteurs du logiciel libre tels que l’APRIL (l’Association pour la Promotion
+de l’Informatique Libre) considèrent que ce format n’est pas ouvert. Ils se réfèrent au cadre
+général d’interopérabilité de l’Union Européenne qui définit un standard ouvert, non
+seulement par ses spécifications publiques et gratuites, mais aussi par la gouvernance
+ouverte de son processus d’élaboration : « le standard est adopté et sera maintenu par une
+organisation sans but lucratif et ses évolutions se font sur base d’un processus de décision
+ouvert accessible à toutes les parties intéressées (consensus ou vote à la majorité, etc.) ». cf. http://www.regardscitoyens.org/non-excel-et-word-ne-sont-pas-des-formats-ouverts/
+
 ---
 
-### Pourquoi ce standard?
+### Passage en CSV : bien plus que “enregistrer sous”
 
-* De nombreux services avaient publié leurs entrées mais...
+.red[**À ne pas faire n°1 :] une première ligne qui ne correspond pas à un champ précis**
+
+![](img/reglecsv1.png)
+
+---
+
+### Passage en CSV : bien plus que “enregistrer sous”
+
+.red[**À ne pas faire n°2 :] mettre en forme les cellules**
+
+![](img/reglecsv2.png)
+
+---
+
+### Passage en CSV : bien plus que “enregistrer sous”
+
+.red[**À ne pas faire n°3 :]insérer deux données de nature différente (ou deux objets) sur une même ligne**
+
+![](img/reglecsv3.png)
+---
+### Passage en CSV : bien plus que “enregistrer sous”
+
+.red[**À ne pas faire n°4 :] fusionner des cellules**
+
+![](img/reglecsv4.png)
+
+---
+
+### Passage en CSV : bien plus que “enregistrer sous”
+
+.red[**À ne pas faire n°5 :] séparer les tableaux dans des onglets différents ou dans une même feuille**
+
+![](img/reglecsv5.png)
+
+---
+
+### Passage en CSV : bien plus que “enregistrer sous”
+
+.red[**À ne pas faire n°6 :] afficher des totaux ou des informations génériques, ou des données qui n’ont pas de lien avec ce jeu de données précis**
+
+![](img/reglecsv6.png)
+
+---
+
+### Passage en CSV : bien plus que “enregistrer sous”
+
+.red[**À faire!**] 
+
+![](img/reglecsv7.png)
+
+???
+
+Ce qui n'empêche pas des administrations de publier des XLS non conformes : https://www.data.gouv.fr/fr/datasets/le-personnel-administratif-technique-et-dencadrement/
+
+---
+
+### Exemple du standard de publication des registres d'entrée d'archives
+
+* De nombreux services d'archives avaient publié leurs entrées mais...
 
 ![](img/standard.png)
+???
+Quelques registres d'entrée des archives disponibles sur data.gouv.fr
 
 ---
 
-### Besoin d'un standard!
+### Besoin d'un standard !
 
+.pull-left[
+![](img/registre_entrees.png)
+]
+
+.pull-right[
 * Le standard de données fournit un cadre commun pour l'ensemble des structures souhaitant diffuser leurs données
 
-* Le standard a été réalisé par le SIAF et l'AAF, qui a mobilisé le réseau sur le sujet
+* Le standard a été réalisé par Datactivist pour le SIAF et l'AAF, en y associant la communauté
 
-* Il va permettre de structurer les données avant de les publier sur une plateforme open data ou le site internet d'une institution
+* Il doit permettre de structurer les données avant de les publier sur une plateforme open data ou le site internet d'une institution
 
 Le schéma sur le [site de l'AAF]( https://www.archivistes.org/Ressources-Registres-des-entrees) et sur le site [schema.data.gouv](https://schema.data.gouv.fr/Archivistes75/registre_entrees/latest.html)
+]
 
 ---
 
@@ -379,6 +529,24 @@ Le schéma sur le [site de l'AAF]( https://www.archivistes.org/Ressources-Regist
 * **Il n'est pas obligatoire**, les services doivent donc faire la démarche de l'utiliser
 
 ---
+
+### Que serait un standard des données sur les trajectoires de formation des étudiants ?
+
+???
+Pistes :
+* profiter de l'existant : standard de dates, de coordonnées géographiques…
+* utiliser un identifiant pivot
+
+---
+
+### publier.etalab.studio, pour vérifier la conformité au standard
+
+[![](img/publier_etalab_studio.png)](https://publier.etalab.studio)
+
+???
+
+Démo rapide
+---
 ### .red[Publier]
 
 .pull-left[
@@ -386,6 +554,9 @@ Le schéma sur le [site de l'AAF]( https://www.archivistes.org/Ressources-Regist
 ]
 
 .pull-right[
+**Quels acteurs clés ?**
+
+**Missions :**
 * Importer les données sur le portail
 
 * Décrire les champs du fichier
@@ -395,23 +566,59 @@ Le schéma sur le [site de l'AAF]( https://www.archivistes.org/Ressources-Regist
 
 Les métadonnées permettent d'éviter d'avoir un [jeu de données mal documenté](https://www.data.gouv.fr/fr/datasets/c2020-sbep-028/#_).
 
-
 ---
 ### [Datasheet for Datasets](https://teamopendata.org/t/traduction-et-adaptation-du-modele-de-description-des-donnees-datasheet-for-datasets/1400) : un modèle de documentation des données
 
-.reduite.center[
-![](./img/datasheet.png)]
+Motivations pour la création du jeu de données
+* Pourquoi le jeu de données a-t-il été initialement créé ?
+* Quelles ont été les utilisations non prévues du jeu de données ?
+* Pour quelles autres tâches le jeu de données pourrait-il être utilisé ?
+* Quelles sont les utilisations trompeuses du jeu de données ?
+* Qui a financé ou soutenu la création du jeu de données ?
 
+Composition du jeu de données
+
+Processus de collecte des données
+
+Pré-traitement des données
+
+Diffusion du jeu de données
+
+Maintenance du jeu de données
+
+Considérations légales et éthiques
+
+???
+
+Exemple : https://www.data.gouv.fr/en/datasets/metadonnees-des-publications-de-linca/
 
 ---
-### .red[Mettre à jour]
+### Exemples de données ouvertes
+
+.pull-left[
+[![](./img/scolarite_paris13.png)](https://www.data.gouv.fr/fr/datasets/donnees-de-scolarite-de-luniversite-paris-13/)
+
+[![](./img/etudiants_inscrits_paris_nanterre.png)](https://opendata.hauts-de-seine.fr/explore/dataset/evolution-du-nombre-detudiants-inscrits-et-dinscriptions-depuis-la-rentree-unive/information/)
+ 
+]
+
+.pull-right[
+[![](./img/OF_paris_nanterre.png)](https://opendata.hauts-de-seine.fr/explore/dataset/offre-de-formation-de-luniversite/information/)
+
+[![](./img/origine_etudiants_paris_nanterre.png)](https://opendata.hauts-de-seine.fr/explore/dataset/origine-geographique-des-etudiants-inscrits-a-luniversite/information/?disjunctive.diplome_type&amp;disjunctive.composante)
+]
+
+---
+### .red[Mettre à j our]
 
 .pull-left[
 ![](./img/update.png)
 ]
 
 .pull-right[
+**Quels acteurs clés ?**
 
+**Missions :**
 * Mettre à jour manuellement ou automatiser l’ouverture
 
 * Conserver les données
@@ -420,116 +627,9 @@ Les métadonnées permettent d'éviter d'avoir un [jeu de données mal document�
 
 ]
 
----
+???
 
-### Quelques points clés
-
-* **Obtenir un soutien au plus haut niveau**
-
-.reduite.center[![](img/matricefreinmoteur.png)]
-
-* **Faciliter la découverte et l’utilisation des données**
-
-["La déception en 4 actes"](https://twitter.com/JulesGrandin/status/935838409809125376)
-
----
-
-### Les 10 commandements 
-
-![](img/10commandements.png)
-
----
-
-### Mais que peut-on ouvrir?
-
-* [Les données d'activités du service](https://data.culture.gouv.fr/explore/dataset/activite-des-services-darchives-en-france/table/) 
-
-* [Les données produites concernant les fonds](https://www.data.gouv.fr/fr/datasets/les-denaturalises-de-vichy/)
-
-* Les données produites dans le cadre de travaux d'indexation collaborative : [Archives Municipales d'Orléans](https://archives.orleans-metropole.fr/annotation-collaborative/chercher-dans-les-annotations/actes-dengagement-militaire?arko_default_603f6a6b6d272--ficheFocus=) ou [SHD](https://www.memoiredeshommes.sga.defense.gouv.fr/fr/article.php?laref=1380&amp;titre=telechargement)
-
----
-
-### De l'open data à l'open content
-
-* L'open content c'est **l'ouverture des contenus**
-
-![](img/OpenContent.png)
-
----
-
-### Offrir la possibilité de s'amuser
-
-[Carte à partir des images en open data (et avec du contenu ouvert!) des Archives Municipales des Marseille](https://umap.openstreetmap.fr/fr/map/carte-des-photos-en-open-data-des-am-de-marseille_628303#13/43.2903/5.3788)
-
-![](img/Marseille_carte.png)
-
----
-### Les bénéfices de l'open data
-
-.pull-left[
-![](./img/obs.png)
-]
-.pull-right[
-En petits groupes, analysez les [données brutes](https://docs.google.com/spreadsheets/d/1gLSCGwmuUeV2d-gbgsgyRUSuMihRvEvzOIvU9x2Nd1g/edit?usp=sharing) et synthétisez  : 
-* La production d’effets bénéfiques ou d’externalités positives
-* L'optimisation de la collecte et du partage des données
-* L'amélioration de la qualité des données
-* La production d'effets négatifs ou d'impacts contre-productifs
-]
----
-
-### Annexe méthodologique : Passage en CSV : bien plus que “enregistrer sous”
-
-.red[**À ne pas faire n°1 :] une première ligne qui ne correspond pas à un champ précis**
-
-![](img/reglecsv1.png)
-
----
-
-###  Annexe méthodologique : Passage en CSV : bien plus que “enregistrer sous”
-
-.red[**À ne pas faire n°2 :] mettre en forme les cellules**
-
-![](img/reglecsv2.png)
-
----
-
-###  Annexe méthodologique : Passage en CSV : bien plus que “enregistrer sous”
-
-.red[**À ne pas faire n°3 :]insérer deux données de nature différente (ou deux objets) sur une même ligne**
-
-![](img/reglecsv3.png)
----
-###  Annexe méthodologique : Passage en CSV : bien plus que “enregistrer sous”
-
-.red[**À ne pas faire n°4 :] fusionner des cellules**
-
-![](img/reglecsv4.png)
-
----
-
-###  Annexe méthodologique : Passage en CSV : bien plus que “enregistrer sous”
-
-.red[**À ne pas faire n°5 :] séparer les tableaux dans des onglets différents ou dans une même feuille**
-
-![](img/reglecsv5.png)
-
----
-
-###  Annexe méthodologique : Passage en CSV : bien plus que “enregistrer sous”
-
-.red[**À ne pas faire n°6 :] afficher des totaux ou des informations génériques, ou des données qui n’ont pas de lien avec ce jeu de données précis**
-
-![](img/reglecsv6.png)
-
----
-
-###  Annexe méthodologique : Passage en CSV : bien plus que “enregistrer sous”
-
-.red[**À faire!**] 
-
-![](img/reglecsv7.png)
+Retours des usagers : valeurs erronées, modèle de données, documentation incomplète ou erronnée. L’ouverture des données est une démarche d’amélioration continue. 
 
 ---
 
