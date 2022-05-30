@@ -139,7 +139,9 @@ class: middle, center
 .pull-left[
 ![](./img/identifier.png)
 ]
+
 --
+
 .pull-right[
 **Quels acteurs clés ?**
 
@@ -217,7 +219,7 @@ Filtrer la verticale métier "Education"
 .pull-left[
 ![](./img/valider.png)
 ]
-
+--
 .pull-right[
 **Quels acteurs clés ?**
 
@@ -279,7 +281,7 @@ Ccl : ce ne sont pas toujours les agents qui s'opposent à l'ouverture des donn�
 .pull-left[
 ![](./img/extraire.png)
 ]
-
+--
 .pull-right[
 **Quels acteurs clés ?**
 
@@ -325,7 +327,7 @@ Outil de gestion de la scolarité dans les universités françaises. L’organis
 .pull-left[
 ![](./img/editer.png)
 ]
-
+--
 .pull-right[
 **Quels acteurs clés ?**
 
@@ -422,7 +424,7 @@ de réidentifier ces données).
 .pull-left[
 ![](./img/standardiser.png)
 ]
-
+--
 .pull-right[
 **Quels acteurs clés ?**
 
@@ -565,7 +567,7 @@ Démo rapide
 .pull-left[
 ![](./img/publier.png)
 ]
-
+--
 .pull-right[
 **Quels acteurs clés ?**
 
@@ -622,12 +624,12 @@ Exemple : https://www.data.gouv.fr/en/datasets/metadonnees-des-publications-de-l
 ]
 
 ---
-### .red[Mettre à j our]
+### .red[Mettre à jour]
 
 .pull-left[
 ![](./img/update.png)
 ]
-
+--
 .pull-right[
 **Quels acteurs clés ?**
 
@@ -650,4 +652,4 @@ class: inverse, center, middle
 
 # Merci !
 
-Contact : [samuel@datactivist.coop](mailto:samuel@datactivist.coop) [annelaure@datactivist.coop](mailto:annelaure@datactivist.coop)
+Contact : [antoine@datactivist.coop](mailto:antoine@datactivist.coop)
