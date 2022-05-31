@@ -98,7 +98,7 @@ Mais c'est difficile : demande peu visible, pas de possibilité de soumettre la 
 ---
 ### Objectifs de la séance
 
-* Connaître les huit étapes de l’open data pipeline
+* Connaître les sept étapes de l’open data pipeline
 
 * Savoir illustrer chaque étape par des exemples concrets
 
