@@ -364,7 +364,8 @@ Réduire les risques : supprimer des champs sensibles
 Etalab considère que, puisque les données publiques sont déjà utilisées par l’administration pour ses missions de service public, elles peuvent être ouvertes sans que les gestionnaires ne se préoccupent de leur qualité : 
 
 > « Les données publiques sont produites ou reçues dans le cadre d’une mission de service public. Elles sont donc généralement d’une qualité permettant le travail quotidien de l’administration et, en fonction de leur destination initiale, une utilisation statistique pertinente. […] Toutefois, les grands systèmes d’information de l’État et des collectivités territoriales, tout comme ceux des entreprises, peuvent parfois comporter des erreurs. L’existence de ces erreurs ne doit pas ralentir la démarche d’ouverture et de partage des données publiques. L’ouverture et le dialogue avec les réutilisateurs favorisent le signalement d’erreurs éventuelles. »
-— Vademecum d'Etalab, cité par Samuel Goëta
+
+> — Vademecum d'Etalab, cité par Samuel Goëta
 
 ???
 
@@ -375,7 +376,7 @@ de la qualité : les agents ne cessent de s’interroger sur la présence possib
 ---
 ### [Dataproofer](http://dataproofer.org/) : un outil de contrôle automatique de la qualité
 
-![](./img/dataproofer.png)
+[![](./img/dataproofer.png)](http://dataproofer.org/)
 
 ???
 
@@ -384,7 +385,7 @@ Dataproofer pour les CSV ou Google Spreadsheets : cellules à compléter, doublo
 ---
 ### [WTFCSV](https://databasic.io/en/wtfcsv/) pour prévisualiser et contrôler un jeu de données
 
-![](./img/wtfcsv.png)
+[![](./img/wtfcsv.png)](https://databasic.io/en/wtfcsv/)
 
 ---
 ### Un temps fort : la journée "Les mains dans la donnée"
@@ -396,7 +397,9 @@ Dataproofer pour les CSV ou Google Spreadsheets : cellules à compléter, doublo
 **Outil utilisé** : l’OpenData Cheatcode
 
 ![](./img/OpenData_Cheatcode.png)
+???
 
+Orchestré par l'OpenData Cheatcode
 ---
 ### Logigramme de l'anonymisation
 
@@ -411,7 +414,7 @@ L'article D. 312-1-3 du CRPA prévoit les catégories de documents administratif
 ---
 ### Anonymiser ou pseudonymiser ?
 
-La loi exige "un traitement permettant de rendre impossible l'identification de ces personnes" ; on parle aussi d'occultation.
+La loi exige "un traitement permettant de rendre impossible l'identification de ces personnes" (occultation).
 
 L'anonymisation comme la pseudonymisation répondent à cette exigence.
 
@@ -422,7 +425,9 @@ analyse des risques de réidentification, à la fois juridique (pour évaluer pa
 nées ne doivent pas pouvoir être réidentifiées) et technique (pour estimer la possibilité technique
 de réidentifier ces données).
 
-— Etalab, *[Pseudonymiser des documents grâce à l’IA](https://guides.etalab.gouv.fr/pseudonymisation/pourquoi-comment/#qu-est-ce-que-la-pseudonymisation)*, Mars 2022
+.footnote[
+Etalab, *[Pseudonymiser des documents grâce à l’IA](https://guides.etalab.gouv.fr/pseudonymisation/pourquoi-comment/#qu-est-ce-que-la-pseudonymisation)*, Mars 2022
+]
 
 ???
 * DCP contenues dans un jeu de données tabulaire = supprimer les colonnes concernées ou chiffrer leur contenu
