@@ -97,7 +97,7 @@ class:center, middle, inverse
 
 ### La pyramide de la donnée
 
-Attribuée à [Russell Ackoff](http://en.wikipedia.org/wiki/Russell_L._Ackoff) en 1989, elle signfie que :
+Attribuée à [Russell Ackoff](http://en.wikipedia.org/wiki/Russell_L._Ackoff) en 1989, elle signifie que :
 .pull-left[
 ![largeur](./img/pyramide.png)
 ]
@@ -520,7 +520,7 @@ source : dictionnaire de l'OCDE https://stats.oecd.org/glossary/detail.asp?ID=22
 
 * données classant les attributs d'un objet (ex. : sexe, catégorie socio-professionnelle)
 
-* les classes pouvent être codées par une valeur numérique arbitraire, qui ne signifie rien (ex. : 1 pour homme et 2 pour femme)
+* les classes peuvent être codées par une valeur numérique arbitraire, qui ne signifie rien (ex. : 1 pour homme et 2 pour femme)
 
 ---
 
