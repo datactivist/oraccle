@@ -12,7 +12,7 @@ ORACCLE a confié à Datactivist le soin de sensibiliser et former les membres d
 | Date | Titre | Intervenant·e·s | Supports
 | :---: | :--- | :---: | :---|
 | `31-05-2022` | *Les étapes de l'ouverture des données* | Antoine Blanchard ([Datactivist](http://datactivist.coop/)) | [diaporama](http://datactivist.coop/oraccle/open_data_pipeline) <br/> [guide](https://docs.google.com/presentation/d/1BR0tYG2uYfA3tSkbxtPXSiY2h_iMsHynzoQDbRJ7OLo/edit?usp=sharing) |
-| `10-06-2022` | *Culture générale des données et de la visualisation de données* | Antoine Blanchard ([Datactivist](http://datactivist.coop/)) | diaporama |
+| `10-06-2022` | *Culture générale des données et de la visualisation de données* | Antoine Blanchard ([Datactivist](http://datactivist.coop/)) | [diaporama matin](http://datactivist.coop/oraccle/culture_g/donnees.html) <br /> diaporama après-midi |
 | `16-06-2022` | *Comprendre l'open data* | Clément Mandron ([Datactivist](http://datactivist.coop/)) | diaporama |
 | ~~`22-06-2022`~~ | ~~*Atelier visualisation de données*~~ | ~~*Sylvain Lapoix*~~ | ~~diaporama~~ |
 | `01-07-2022` | *Les mains dans la donnée* | Maëlle Fouquenet et Arthur Sarrazin ([Datactivist](http://datactivist.coop/)) | diaporama |
