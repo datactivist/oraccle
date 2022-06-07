@@ -138,7 +138,7 @@ L'informatique consiste dans le traitement de l'information, ou de la donnée. L
 --
 
 .right-column[
-![](./img/wooclap_1.png)
+![](./img/wooclap_2.png)
 ]
 
 ???
@@ -427,7 +427,7 @@ Class: middle, center
 
 ## La mise en données du monde
 
-- **Concrètement, aujourd'hui, quels aspects de votre vie sont mis en données ?**
+- **Concrètement, aujourd'hui, quels aspects de votre vie sont mis en données ?**
 
 --
 
