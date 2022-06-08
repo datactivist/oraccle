@@ -1,0 +1,972 @@
+---
+title: "Comprendre et mettre en œuvre l'open data"
+subtitle: "Formation AAF"
+author: "Samuel Goëta, Anne-Laure Donzel, Clément Mandron, Datactivist"
+date: "`r format(Sys.Date(), '%d %b %Y')`"
+output:
+  SlidesDatactivist::moon_reader:
+    css: [default, datactivist, datactivist-fonts]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+params:
+  event: Formation "comprendre et mettre en œuvre l'open data"
+  slug: aaf
+
+---
+layout: true
+  
+
+`r paste0("<div class='my-footer'><span>", params$event, "</span> <center><div class=logo><img src='https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/fond_noir_monochrome.png' width='0px'></center></span></div>")` 
+
+
+---
+
+class: center, middle
+
+Ces slides en ligne : `r paste0("http://datactivist.coop/", params$slug)`
+
+Sources : `r paste0("https://github.com/datactivist/", params$slug)`
+
+
+Les productions de Datactivist sont librement réutilisables selon les termes de la licence [Creative Commons 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode.fr).
+
+<BR>
+<BR>
+
+.reduite[![](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)]
+
+
+---
+
+<img src='https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/logo.png' width='320px'>
+
+### We .red[open data], we make them .red[useful]
+
+.reduite.center[![](img/MICALLEF_DATACTIVIST-WEB_77.JPG)]
+
+---
+## Qui sommes nous ?
+
+- Datactivist est un .red[**pure player de l’open data**] créé en 2016, par Samuel Goëta et Joël Gombin.
+
+- Se positionnant sur .red[**toutes les étapes du travail d’ouverture des données**], Datactivist travaille tant avec les producteurs de données qu’avec les réutilisateurs et participe à l’appropriation des données par chacun.
+
+- Nous appliquons nos propres .red[**valeurs**] : nous sommes une coopérative ; nos supports de formation et nos contenus sont librement réutilisables, publiés en licence Creative Commons.
+
+- Une approche issue de la recherche : voir notamment **https://datactivist.coop/these**. 
+
+- Nous animons également la communauté [#TeamOpenData](https://teamopendata.org).
+
+---
+## Nos activités
+
+- Conseil sur les .red[**stratégies d’ouverture de données**] : nous aidons les organisations dans la conception et la mise en œuvre de leur stratégie d’ouverture de données.
+
+
+- .red[**Accompagnement dans la réutilisation de données ouvertes**] : nous aidons les organisations à utiliser les données au quotidien. 
+
+- .red[**Sensibilisation et formation à la donnée**] : nous formons à la culture générale des données, nous enseignons les grands principes et bonnes pratiques de l'open data et nous introduisons à la data science. 
+
+- .red[**Médiation de données**] : nous organisons des hackathons, des open data camps, des expéditions de données...
+
+???
+
+La médiation de données est aussi fondamentalement une animation de communauté(s). 
+
+---
+## Notre vision
+
+### D'un open data de l'offre à un .red[open data de la demande]
+
+Aujourd’hui, les administrations choisissent les données à ouvrir, elles décident du quand et du comment .red[**sans consulter les usagers**].
+
+Les rares données ouvertes sont souvent décevantes : pas à jour, trop agrégées, mal documentées, mal formatées, parfois inutilisables. 
+
+Il faut aujourd’hui passer à l’étape supérieure : .red[**un open data piloté par la demande**].
+
+Mais c'est difficile : demande peu visible, pas de possibilité de soumettre la communication des données à l'expression d'une demande. Leviers : demandes d'ouverture, plateformes, animations (ex : hackathon), gouvernance partagée... 
+
+---
+### Rappel des objectifs de la formation 
+
+> * Comprendre les grands principes de l'ouverture des données
+
+> * Appréhender le cadre juridique spécifique aux données publiques
+
+> * Maitriser les enjeux liés à la qualité des données publiques pour faciliter la réutilisation
+
+> * Disposer des informations essentielles pour initier une démarche d'open data dans son institution
+
+
+---
+### Rappel du programme de la formation 
+
+.pull-left[
+
+** lundi 02 mai**
+
+* Éléments de l’histoire de l’ouverture des données
+
+* Revue des grands principes de l’open data
+
+*  Le droit de la réutilisation des données publiques et les obligations issues de la loi pour une République numérique
+
+* Panorama des données ouvertes et de leurs usages
+]
+
+.pull-right[
+
+** Lundi 11 mai **
+
+* Préparer l'ouverture de ses (premières) données : le registre des entrées !
+
+* Importance de la standardisation
+
+* Le schéma de donnée du registre
+
+* Mise en pratique
+]
+
+---
+class: middle, center
+
+### Avant de commencer
+
+## Présentons nous
+
+![](img/pdr.png)
+
+.footnote[[Public Domain Review](https://publicdomainreview.org/collection/engravings-from-a-french-ice-skating-manual-1813)]
+
+---
+class: inverse, center, middle
+
+# Origines et principes de l'open data
+
+---
+
+### [.red[Les multiples facettes]](https://books.openedition.org/cdf/5005?lang=fr)  de l'open data
+
+.reduite.center[![](img/facettes.png)]
+
+--
+Selon vous, quelle facette est-elle la plus porteuse actuellement ?
+
+---
+### Open data : un terme récent
+
+Le terme est apparu pour la première fois dans les années 1970 dans les accords qu’a signés la NASA avec des pays partenaires en vue du partage de données satellitaires. 
+
+C’est en 1995 qu’on en voit le premier usage public aux Etats-Unis dans un rapport de la National Academy of Science intitutlé "_On the Full and Open Exchange of Scientific Data_".
+
+Dans le langage courant, cela fait près de 10 ans que l'ouverture des données est devenue un élément majeur des politiques publiques numériques. 
+
+** Explorons maintenant quelques grandes dates de l'apparition de l'open data.**
+
+---
+### 2005 : [Open Definition](https://opendefinition.org/)
+
+#### Une définition juridique des droits de l'usager d'un savoir ouvert
+.reduite[.center[![](img/opendef.png)]]
+
+
+---
+### 2007 : [la rencontre de Sebastopol ](https://opengovdata.org/)
+
+.pull-left[
+**Quoi ?** Une rencontre de l'Open Governement Group à Sebastopol (Californie), siège des éditions O'Reilly
+
+**Pourquoi ?** : Influencer le futur président des Etats Unis pour faire avancer l'open data
+
+**Comment ?** En adoptant une déclaration définissant les grands principes de l'Open Government Data 
+
+]
+
+.pull-right[
+![](https://datactivist.coop/dataliteracy/img/photofamille.jpg)
+]
+---
+class:middle, center
+![](https://datactivist.coop/dataliteracy/img/session.jpg)
+# Revue des principes
+
+---
+class: middle, center
+
+# 1. Des données complètes
+### Toutes les données publiques doivent être rendues disponibles dans les limites légales liées à la vie privée ou la sécurité.
+---
+class: center, middle
+![](https://datactivist.coop/dataliteracy/img/OPENDATA.jpg)
+# BY DEFAULT
+---
+class: middle, center
+
+# 2. Des données primaires
+###  Les données ouvertes sont telles que collectées à la source, non-agrégées avec le plus haut niveau de granularité
+
+---
+class: middle, center
+
+# 3. Des données fraiches (*timely*)
+### Les données doivent être disponibles dès qu'elles sont produites
+
+---
+class: middle, center
+
+# 4. Des données accessibles 
+### Les données doivent être utilisables par le plus grand nombre d’usagers potentiels
+
+---
+class: middle, center
+
+# 5. Des données exploitables par les machines 
+###  Les données peuvent être traitées automatiquement par les machines
+
+---
+class: middle, center
+
+# 6. Des données non discriminatoires 
+### Elles peuvent être utilisées par tous sans réclamer un enregistrement préalable
+---
+class: middle, center
+
+# 7. Des données dans un format ouvert
+### Ce format ne doit pas être la propriété d'une organisation en particulier (.xls) et doit être gouverné par ses usagers
+
+---
+class: middle, center
+
+# 8. Des données dans une licence ouverte
+### Idéalement dans le domaine public sinon dans une licence conforme à l'[Open Definition](www.opendefinition.org) : Licence Ouverte (CC-BY) ou ODBL (CC-BY-SA)
+
+---
+### 2008 : Tim Berners-Lee ["Raw data now"](https://www.ted.com/talks/tim_berners_lee_on_the_next_web?language=fr)
+#### La demande de données brutes sous les projecteurs
+
+.reduite[.center[
+![](img/ted.png)
+]]
+---
+### 2010 : [le modèle en 5 étoiles de Tim Berners-Lee](https://5stardata.info/fr/)
+
+.reduite[.center[![](./img/5star.png)]]
+
+---
+## Des principes techniques sans portée politique
+>"Il peut être vrai en un sens qu'un régime devient plus ouvert chaque fois qu'il fournit des données ouvertes supplémentaires, même pour les sujets banals et apolitiques, mais il est facile d'imaginer qu'un régime fermé pourrait divulguer de grandes quantités de données conformes à ces huit exigences [de Sébastopol] **sans pour autant accroître sa responsabilité réelle en tant que gouvernement **. 
+
+> Une diffusion électronique des déclarations de propagande faites par les dirigeants politiques de la Corée du Nord, par exemple, pourrait satisfaire à ces huit exigences et ne pas promouvoir une transparence ou une responsabilité supplémentaires de la part d'un régime notoirement fermé et opaque."
+
+>Yu & Robinson (2012) « [The New Ambiguity of Open Government](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2012489) » 
+
+---
+### 2011 : [la déclaration pour un gouvernement ouvert](https://www.opengovpartnership.org/d-claration-commune-pour-un-gouvernement-ouvert)
+
+.reduite[.center[![](img/declaration.png)]]
+
+---
+### Depuis 2010 : l'ère des classements
+[![](img/odb.png)](https://opendatabarometer.org/)
+
+---
+### Depuis 2010 : l'ère des classements
+[![](img/godi.png)](https://index.okfn.org/place/)
+
+---
+### 2013 : la [charte du G8 sur l'open data](https://www.modernisation.gouv.fr/sites/default/files/fichiers-attaches/charte-g8-ouverture-donnees-publiques-fr.pdf)
+
+![](img/g8.jpg)
+---
+### 2015 : la [charte internationale de l'open data]()
+.reduite[.center[
+![](img/odcharter.png)
+]]
+
+---
+class: inverse, center, middle
+
+# Éléments du cadre juridique de l'open data
+
+---
+### Le guide CADA-CNIL : le document de référence
+
+Je n'indique ici que quelques éléments généraux sur le cadre juridique, ce guide constitue votre source de référence. Joël Gombin, co-fondateur de Datactivist, a publié sa [fiche de lecture](https://teamopendata.org/t/guide-commun-cnil-et-cada-open-data-rgpd/1320) sur TeamOpenData.
+
+.reduite[.center[
+[![](./img/guide.png)](https://www.cnil.fr/sites/default/files/atoms/files/guide_open_data.pdf)
+]]
+
+---
+
+### 1978 : La loi CADA, vers le "droit de savoir"
+* Le fondement : la .red[Déclaration des Droits de l'Homme et du Citoyen de 1789] dans son article 15, "la Société a le droit de demander compte à tout Agent public de son administration." 
+
+* Le droit d'accès des citoyens à l'information publique émerge en **1978 avec la loi dite CADA** du nom de la Commission d'Accès aux Documents Administratifs. 
+
+* La France était le .red[3e pays au monde] après la Suède en 1766 et les Etats-Unis en 1966 avec le Freedom of Information Act (FOIA) en 1966  à accorder un "droit de savoir" avec pour but d'améliorer les relations entre le public et l'administration.
+
+.footnote[Il faudrait maintenant désigner la loi comme le Code des relations entre le public et l'administration (CRPA) qui, dans son [livre 3](https://www.legifrance.gouv.fr/affichCode.do;jsessionid=BDF8EC0BD562E214CCD9A5ADD435D690.tplgfr42s_1?idSectionTA=LEGISCTA000031367685&cidTexte=LEGITEXT000031366350&dateTexte=20190429), codifie le droit d'accès et de réutilisation mais il est encore moins connu que la loi CADA…]
+
+---
+### La loi CADA : un point noir dans la transparence de la vie publique
+
+Même si la France est le 3e pays à avoir adopté un droit d'accès, la loi CADA n'est pas un outil fort de la transparence de la vie publique. Ses principaux défauts : l'absence de sanctions et une procédure longue qui décourage les demandeurs et favorise le contournement par les administrations. 
+[![](./img/europam.png)](http://europam.eu/?module=country-profile&country=France)
+
+---
+### Un droit d'accès très faible au regard des standards internationaux
+
+.pull-left[Paradoxe : la France a une législation parmi les plus ambitieuses au monde en matière d'open data mais le droit d'accès y est un des plus mauvais au monde… 
+
+La France est classée .red[105e sur 123] du classement mondial des lois d'accès à l'information publique RTI Rating.
+
+L'open data est comme la Tour de Pise : un très bel édifice posé sur des fondations instables.
+]
+
+.pull-right[
+[![](./img/rti.png)](https://www.rti-rating.org/country-data/)
+]
+
+---
+### Les conditions d'exercice du droit d'accès
+
+.red[ Une définition très large des documents administratifs]
+> Les documents administratifs peuvent revêtir de nombreuses formes (dossiers, rapports, études, comptes rendus, procès-verbaux, statistiques, directives, instructions, circulaires, codes sources, etc.) et adopter tout support (écrit, enregistrement sonore ou visuel, forme numérique ou informatique). 
+
+Le droit d'accès s'appplique aux documents administratifs produits dans le cadre d'une .red[mission de service public] ie :
+> Une mission d'intérêt général sous le contrôle de l'administration et qui est dotée à cette fin de prérogatives de puissance publique est chargée de l'exécution d'un service public. 
+
+Il ne s’exerce que si l’administration a effectivement en sa possession le document demandé, que si le document est formellement **achevé**, qu'il existe et qu'il n'est pas **préparatoire à une décision administrative** en cours. 
+
+---
+### Les exclusions au droit d'accès
+
+Le droit d'accès .red[**ne doit pas porter atteinte aux secrets protégés**] : 
+- le fonctionnement de l'État : délibérations du Gouvernement, secret de la défense nationale, la conduite de la politique extérieure de la France, la sûreté de l'État…
+- la protection de la vie privée
+- le secret médical
+- le secret des affaires (secret des procédés, des informations économiques et financières et
+des stratégies commerciales ou industrielle)
+- les mentions portant une appréciation ou un jugement de valeur sur une personne physique ou
+faisant apparaître un comportement d'une personne pouvant lui porter préjudice…
+
+Le document ne peut être publié qu'après avoir fait l'objet d'un traitement permettant
+d'.red[**occulter les mentions protégées**]. L’administration n’est pas tenue de publier un document lorsque “les travaux d’occultation dénatureraient ou videraient de sens le document” ou si “le document est indivisible ou l’occultation est trop complexe”.
+---
+### Le cas des données personnelles
+
+La prohibition de la communication à des tiers ne porte pas sur les données personnelles en général, mais .red[**sur les données à caractère personnel relevant de la vie privée**] des personnes concernées (âge, coordonnées personnelles, situation patrimoniale et financière, sympathies politiques, les croyances religieuses…)
+
+La mise en ligne de données à caractère personnel sans anonymisation n'est permise que dans .red[**trois cas**] :
+1. une disposition législative contraire le prévoit (exemple : [Transparence Santé](https://www.data.gouv.fr/fr/datasets/transparence-sante-1/))
+2. si les personnes intéressées ont donné leur accord (consentement au sens de l’article 4 du RGPD)
+3. les documents relevant de [l’article D312-3-1 du CRPA](https://www.legifrance.gouv.fr/affichTexte.do;jsessionid=51E99AF738C12521572D6A7F6C8C03E8.tplgfr23s_1?cidTexte=JORFTEXT000037797147&dateTexte=&oldAction=rechJO&categorieLien=id&idJO=JORFCONT000037796937)
+
+
+Hors de ces cas, il faut .red[**[anonymiser les données](https://github.com/SGMAP-AGD/anonymisation/wiki/Guide-de-l'anonymisation)**] : elles ne doivent plus se référer à une personne réelle (exit les noms, identifiants…) et ne doivent plus être spécifiques à un individu mais communes à un ensemble de personnes. L’indexation de ces données par un moteur de recherche externe est proscrite.
+
+
+---
+### Du droit d'accès au droit de réutilisation
+
+Alors qu'aux Etats-Unis les données publiques sont placées dans le domaine public depuis les années 70, la question de la réutilisation des données publiques a émergé en France et en Europe dans les années 1990 avec le développement d'Internet facilitant la diffusion des données publiques et le développement de nouveaux services au public. Quelques jalons :
+
+```{r echo=FALSE}
+library(timevis)
+data <- data.frame(
+  id      = 1:7,
+  content = c("Loi CADA","Directive PSI", "Directive INSPIRE", "Révision de la directive PSI", "Loi Notre", "Loi Valter", "Loi pour une République Numérique"),
+  start   = c("1978-07-17","2003-11-17", "2007-03-14","2013-06-13","2015-08-07","2015-12-28","2016-10-07")
+)
+timevis(data, loadDependencies = FALSE, width = "715px", height = "350px")
+```
+---
+
+### Le droit de réutilisation en archives
+
+La .red[**réutilisation des informations publiques**] désigne l'utilisation de documents ou de données par un tiers, pour d’autres fins que celles pour lesquelles ils ont été produits ou reçus initialement.
+
+Les .red[**informations publiques**] sont tous les documents sauf ceux couverts par un délai de communicabilité et ceux sur lesquels des tiers détiennent des droits de propriété intellectuelle.
+
+Un principe : la .red[**gratuité de la réutilisation**] mais avec des exceptions, notamment lorsque la réutilisation porte sur :
+> *Des informations issues des opérations de numérisation des fonds et des collections [...] des archives et, le cas échéant, sur des informations qui y sont associées lorsque ces dernières sont commercialisées conjointement.* 
+
+Les licences :
+* Si gratuité : licence facultative (à choisir dans une liste fixée par l'Etat)
+* Si redevance : licence obligatoire
+
+---
+
+### Loi pour une République Numérique : l'ouverture des données par défaut
+
+<img style="float: right;margin:10px" src="./img/repnum.jpg">
+Promulguée le 7 octobre 2016, après 4 ans d'annonces et de consultation, le titre 1 de la [loi pour une République  Numérique](https://www.legifrance.gouv.fr/affichTexte.do;jsessionid=B5632993E54F7CCC2606664B64CDF612.tpdila11v_1?cidTexte=JORFTEXT000033202746&categorieLien=id) porte sur l'ouverture des données publiques. 
+
+La loi impose un principe d'.red[**ouverture des données par principe**] qui ne fait pas l'objet de sanctions à toutes les administrations, les entreprises délégataires d'une mission de service public et les .red[**collectivités locales de plus de 3500 habitants et 50 agents**]. 
+
+L'ouverture concerne un .red[**périmètre très large**] : 
+* les documents communiqués suite à des demandes CADA
+* les "bases de données"
+* les données "dont la publication présente un intérêt économique, social, sanitaire ou environnemental".
+Rares sont donc les données publiques qui ne sont pas concernées par cette obligation d'ouverture. 
+
+---
+
+### La définition des données
+
+Le guide CADA-CNIL rappelle la **définition des "bases de données"**
+
+> On entend par base de données un recueil d'œuvres, de données ou d'autres éléments indépendants, disposés de manière systématique ou méthodique, et individuellement accessibles par des moyens électroniques ou par tout autre moyen (art L112-3 du code de la propriété intellectuelle)
+
+> En d’autres termes il s’agit d’un ensemble de données organisé en vue de son utilisation par des programmes correspondant à des applications distinctes et de manière à faciliter l'évolution indépendante des données et des programmes (en anglais : data base)
+
+Le document donne également une **définition de ce qu'est une "donnée"** :
+
+> Une donnée correspond à la représentation d'une information sous une forme conventionnelle destinée à faciliter son traitement (en anglais : data).
+
+---
+### Loi pour une République numérique : l'utilisation de standards ouverts
+<img style="float:right; margin:10px"  src="./img/openstand.png">
+
+Afin de faciliter la réutilisation des données par les machines, la loi pour une République Numérique consacre **l'utilisation de standards ouverts** pour la communication des documents administratifs. 
+
+L’administration est dorénavant tenue, lorsqu’elle communique un document administratif au format électronique, de le mettre à disposition du citoyen **"dans un standard ouvert, aisément réutilisable et exploitable par un système de traitement automatisé"**. 
+
+Concrètement, cela devrait empêcher la publication de fichiers PDF là où un fichier CSV pourrait être diffusé.
+
+---
+### Loi pour une République numérique : une limitation des licences
+
+La loi **limite par décret les licences** qui peuvent être utilisées par les administrations. Le [décret du 27 avril 2017](https://www.legifrance.gouv.fr/eli/decret/2017/4/27/2017-638/jo/texte) autorise deux licences : 
+
+* la Licence Ouverte d'Etalab 
+
+* la licence ODbL (Open Database License).
+
+Ces deux licences offrent **un choix aux administrations** : la licence ouverte étant plus permissive que la licence ODBL qui a été conçue dans une logique de "pot commun" permettant de garantir que les données resteront ouvertes après leur réutilisation.
+
+Utiliser une autre licence impose une **homologation** auprès de la DINSIC avec un exposé des motifs ayant conduit à sortir de la liste fixée dans le décret et une consultation des usagers affectés par la licence proposée. L'homologation doit être faite pour chaque jeu de données même si la licence reste la même.
+
+---
+### Loi pour une République numérique : une limitation des licences
+
+.reduite.center[
+[![](./img/licences.png)](http://www.opendatalab.fr/index.php/laboratoire/le-kit-collectivites)
+]
+.footnote[source : [SGAR Occitanie](http://www.opendatalab.fr/index.php/laboratoire/le-kit-collectivites)]
+---
+class: inverse, center, middle
+
+# Où en est l'open data ?
+
+---
+### Des politiques d'open data "de l'offre"
+
+.pull-left[
+### En théorie
+
+#### Toutes les données sont ouvertes sous leur forme brute dès leur production
+
+]
+.pull-right[
+
+
+### En pratique
+
+#### L’administration choisit quelles données ouvrir, comment les ouvrir, quand et ce qu’elles contiennent
+
+]
+
+---
+### La réutilisation : un parcours fait de frictions et de déceptions
+
+.pull-left[
+[![](img/users.png)](https://thereboot.github.io/moti-personas/)
+]
+.pull-right[
+####  Des données difficiles à trouver, pas ouvertes partout
+
+####  Granularité temporelle et spatiale souvent trop faible
+
+####  Des données souvent inutilisables : manque de documentation
+
+####  Des données pas mises à jour
+
+####  Des portails qui ciblent les développeurs
+
+]
+
+---
+### Le problème de la qualité des données
+
+> **Les données des gouvernements sont souvent incomplètes, pas actualisées, de mauvaise qualité et fragmentaires.** 
+
+> Dans la plupart des cas, les catalogues ou portails de données ouvertes sont alimentés manuellement, conséquence d’une approche informelle de la gestion des données. 
+
+> De plus, les procédures, les calendriers et les responsabilités des institutions publiques chargées de leur gestion manquent souvent de clarté. Ainsi, de manière générale, la gestion et la publication des données ouvertes sont fragiles et sujettes à des erreurs multiples.
+
+.footnote[Source : 
+[Rapport mondial du 4e Open Data Barometer](https://opendatabarometer.org/4thedition/report/?lang=fr)
+]
+---
+### Des données bien cachées
+.pull-left[
+![](https://index.okfn.org/images/Datagapsclean.jpg)
+]
+.pull-right[
+"La découvrabilité des données est un défi majeur. Nous avons des portails et des registres de données, mais les organismes gouvernementaux qui relèvent d'un seul gouvernement national publient toujours les données de différentes façons et à différents endroits (...).
+
+**La découvrabilité des données est une condition préalable pour que les données ouvertes réalisent leur potentiel et, actuellement, la plupart des données sont très difficiles à trouver**."]
+
+
+.footnote[https://index.okfn.org/insights/]
+
+---
+### Un exemple de données introuvables
+
+Ce fichier contient tous les signes officiels de la qualité et de l'origine (SIQO) : les AOC et AOP, IGP, Label rouge, spécialité traditionnelle garantie, Agriculture biologique… Très utile mais qui peut le trouver sur data.gouv.fr ?
+[![](./img/siqo.png)](https://www.data.gouv.fr/fr/datasets/siqo-publies/)
+
+---
+### Un autre exemple de données vraiment introuvables 
+
+Ce jeu de données contient plus de 6000 marchés publics attribués par l'Etat. Mais, malgré plusieurs [signalements](https://www.data.gouv.fr/fr/datasets/aife-de-44785462100045/#discussion-5c5d2857634f41019657c80d-0), tout est fait pour le rendre introuvable !
+
+[.reduite[![](./img/wtfopendata.png)]](https://www.data.gouv.fr/fr/datasets/aife-de-44785462100045/)
+---
+
+### Le développement de l'open data en France
+
+.reduite.center[![](./img/obsod.png)](http://slides.com/loichay/resultats-odt-oct18#/)
+
+---
+
+### Le développement de l'open data en France
+
+.reduite.center[
+[![](./img/carto_obs.png)](https://umap.openstreetmap.fr/fr/map/observatoire-open-data-des-territoires_239529#6/45.806/5.603)
+]
+
+---
+
+### Une multitude de portails territoriaux
+
+[![](./img/portailslocaux.gif)](https://airtable.com/shrmZOh5If14Q1PVN/tblwklJPsyayeH5lX?blocks=hide)
+
+---
+### Une multitude de portails nationaux
+
+[![](./img/portailsnat.gif)](https://airtable.com/shr3IYfHZW1cVTS3s/tblVtTOudK5Ygpsmj?blocks=hide)
+
+
+---
+### Une multitude de solutions de portails sur le marché
+
+![](img/tableauportails.png)
+
+--
+
+#### Tour d'horizon de ces solutions
+---
+### Exemple de données ouvertes : la [base SIRENE](https://www.data.gouv.fr/fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/)
+
+.reduite.center[![](img/sirene.png)]
+---
+### La base SIRENE : exemple de cas d'utilisation
+
+.reduite[.center[![](img/ruesoif.png)]]
+---
+### Exemple de données ouvertes : la [base adresse nationale](https://www.data.gouv.fr/fr/datasets/base-adresse-nationale/)
+.reduite[.center[![](img/ban.png)]]
+
+---
+### Exemple de données ouvertes : les [accidents de la route](https://www.data.gouv.fr/fr/datasets/base-de-donnees-accidents-corporels-de-la-circulation/)
+.reduite.center[![](img/accidents.png)]
+---
+### Exemple de données ouvertes : Les accidents de la route
+.reduite.center[![](img/trajetleplussur.png)]
+.footnote[Plus d'accidents sur l'A8 mais surtout plus de véhicules…]
+---
+### Exemple de données ouvertes : les accidents de la route
+.reduite.center[![](img/marsactu.png)]
+.footnote[[Carte par Joël Gombin dans Marsactu](https://joelgombin.github.io/marsactu_accidents/chronique.html)]
+---
+### Exemple de données ouvertes : les [inspections des restaurants](https://www.data.gouv.fr/fr/datasets/resultats-des-controles-officiels-sanitaires-dispositif-dinformation-alimconfiance/)
+.reduite.center[![](img/aliminfos.png)]
+.footnote[[Résultats des contrôles officiels sanitaires : dispositif d'information « Alim’confiance »](https://www.data.gouv.fr/fr/datasets/resultats-des-controles-officiels-sanitaires-dispositif-dinformation-alimconfiance/)]
+---
+### Exemple de données ouvertes : les inspections des restaurants
+.reduite[.center[![](img/resto.png)]]
+.footnote[[155 établissements dont l'hygiène doit être corrigée de manière urgente ](https://dgal.opendatasoft.com/explore/dataset/export_alimconfiance/table/?disjunctive.filtre&disjunctive.app_libelle_activite_etablissement&disjunctive.ods_type_activite&refine.synthese_eval_sanit=A+corriger+de+mani%C3%A8re+urgente)]
+---
+### Exemple de données ouvertes : le [répertoire national des élus](https://www.data.gouv.fr/fr/datasets/donnees-du-repertoire-national-des-elus/)
+
+.reduite.center[
+![](./img/repelus.png)
+]
+
+---
+### Exemple de données ouvertes : les [valeurs foncières](https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/#_)
+
+![](./img/dvf.png)
+---
+### Exemple de données ouvertes : les valeurs foncières
+
+.reduite.center[
+[![](./img/meilleursagents.png)](https://www.meilleursagents.com/prix-immobilier/dvf/aix-en-provence-13100/avenue-saint-jerome-1108044769/)
+]
+
+---
+### Exemple de données ouvertes : [Santé Publique France sur la Covid-19](https://www.data.gouv.fr/fr/datasets/donnees-hospitalieres-relatives-a-lepidemie-de-covid-19/)
+
+![](img/dashcovid.png)
+
+---
+### Exemple de données ouvertes : [Campagnes photographiques des Monuments Historiques](https://data.culture.gouv.fr/explore/dataset/photographies-serie-monuments-historiques-de-1851-a-1914/images/?refine.nom_reg=BRETAGNE&refine.nom_dept=FINISTERE&dataChart=eyJxdWVyaWVzIjpbeyJjaGFydHMiOlt7InR5cGUiOiJjb2x1bW4iLCJmdW5jIjoiQ09VTlQiLCJzY2llbnRpZmljRGlzcGxheSI6dHJ1ZSwiY29sb3IiOiIjNjZjMmE1In1dLCJ4QXhpcyI6Im5vbV9yZWciLCJtYXhwb2ludHMiOjUwLCJzb3J0IjoiIiwiY29uZmlnIjp7ImRhdGFzZXQiOiJwaG90b2dyYXBoaWVzLXNlcmllLW1vbnVtZW50cy1oaXN0b3JpcXVlcy1kZS0xODUxLWEtMTkxNCIsIm9wdGlvbnMiOnt9fX1dLCJ0aW1lc2NhbGUiOiIiLCJkaXNwbGF5TGVnZW5kIjp0cnVlLCJhbGlnbk1vbnRoIjp0cnVlfQ%3D%3D&location=5,46.50652,2.39891)
+
+![](img/dataculture.png)
+
+---
+### Exemple de données ouvertes : [Les AD des Hauts-de-Seine](https://opendata.hauts-de-seine.fr/explore/dataset/cartes-postales/information/)
+
+Un projet mélant open data et indexation collaborative
+
+![](img/hautsdeseine.png)
+
+---
+
+class:inverse, center, middle 
+
+### A la semaine prochaine !
+
+---
+class:inverse, center, middle 
+
+### Pour commencer
+
+### Le témoignage d'une archiviste impliquée dans un projet d'open data
+
+[Lien vers la vidéo](https://www.dropbox.com/s/y7wlk4gtjca15bl/Entretien%20Severine%20Menet.mp4?dl=0)
+
+---
+
+class: inverse, center, middle
+
+### Le schéma de registre des entrées d'archives
+
+---
+
+### C'est quoi un schéma de données ?
+
+---
+
+### Les objectifs d'un standard de données
+
+* Convertir les données dans un format ouvert (spécifications techniques publiques et sans restriction d'accès ni de mise en œuvre) et lisible par les machines
+
+* Adopter des spécifications partagées : GTFS, DECP, IATI, OCDS, socle commun des données locales…
+
+* Transformer les données
+
+.red[Bonne nouvelle : il existe désormais un standard pour la publication des registres d'entrées d'archives!]
+
+]
+
+---
+
+### Pourquoi ce standard?
+
+* De nombreux services avaient publié leurs entrées mais...
+
+![](img/standard.png)
+
+---
+
+### Le schéma du registre d'entrées en chiffres
+
+
+.pull-left[
+
+* 2 commanditaires : le SIAF et l'AAF
+
+* 10 mois de travail
+
+* 5 COPIL
+
+* 48 commentaires sur le schéma]
+
+
+.pull-right[
+
+![](img/registre1.png)
+
+]
+
+---
+
+### Point de départ du projet
+
+.pull-left[
+* **Un besoin** : rendre compte des entrées dans les différents services publics d’archives
+
+* **Une volonté** : existence d’un groupe prêt à effectuer et porter le travail
+
+]
+
+.pull-right[
+
+**Les acteurs** 
+
+* L’Association des Archivistes Français (AAF) qui a porté la démarche et mobilisé son réseau de membres
+
+* Le Service Interministériel des Archives de France (SIAF) qui a financé et apporté son expertise et un portage officiel / institutionnel
+
+]
+
+---
+
+### Organisation du projet
+
+**Création d’un groupe projet, représentatif des différentes strates administratives des archives publiques** 
+  * SIAF
+  * AAF
+  * Services à compétence nationale (archives nationales, programme VITAM)
+  * Archives départementales
+  * Archives communales et intercommunales
+  * Archives régionales
+  * 1 représentant de la communauté des réutilisateurs
+
+**Comment le GT a été constitué ?**
+  * Appel au sein de l’AAF
+  * Sollicitation individuelle
+
+---
+
+### Objet du schéma
+
+.pull-left[
+
+**Registre d’entrée d’archives **:
+
+* Tous les services en possèdent un, il est rendu obligatoire par un règlement de… 1921 
+* Il peut être intégrer dans un SIA ou tenu sur un tableur
+* Objectif : tenir une liste de tous les documents qui entrent dans le service, dans un but de traçabilité des entrées et d’organisation interne
+Mais…tous les services n’ont pas exactement les mêmes champs et ne renseignent pas toujours les entrées au même moment.
+
+]
+
+.pull-right[
+![](img/registre3.png)
+]
+
+---
+
+### Etape 1 - Etat des lieux
+
+.pull-left[
+**Etat des lieux**
+
+* Passage en revue des jeux de données déjà publiés en open data et analyse de ceux-ci
+* Recherche des éléments communs
+* Construction d’un premier cadre
+
+]
+
+.pull-right[
+
+![](img/registre4.png)
+]
+---
+
+### Etape 2 - Identification des cas d’usage
+
+.pull-left[
+
+* Première réunion du COPIL
+* Comprendre les besoins et les attentes sur le schéma
+
+]
+
+.pull-right[
+
+![](img/registre5.png)
+]
+
+---
+
+### Etape 3 - Construction du schéma
+
+.pull-left[
+
+**Quelle méthodologie ?**
+
+* Doc collaboratif
+* Proposition d’une première version maximaliste puis réduction des éléments
+* Travail important sur les référentiels externes et sur la sémantique (nom des champs, vocabulaires contrôlés…)
+
+]
+
+.pull-right[
+
+![](img/registre6.png)
+]
+---
+
+### Etape 4 - Construction du schéma, exemple de questionnements
+
+.pull-left[
+
+Choix d’un identifiant unique, commun et provenant d’une ressource partagée
+
+]
+
+.pull-right[
+
+![](img/registre7.png)
+]
+
+---
+
+### Etape 5 - Appel à commentaires 
+
+* Webinaire de présentation
+* Une version stabilisée à été proposée à la communauté des archivistes et soumise à commentaires
+
+![](https://youtu.be/FrlU1l4vo9k)
+
+
+---
+
+### Etape 6 - Validation du schéma 
+
+.pull-left[
+* Passage en revue des commentaires et décision collective sur les suites à donner au commentaire
+
+* Une fois le schéma validé : passage au format table schema et en json
+
+]
+
+.pull-right[
+
+![](img/registre9.png)
+
+]
+
+---
+
+### Etape 7 - Publication du schéma 
+
+.pull-left[
+
+* Choix d’une date stratégique : **9 juin 2021**
+
+* Importance de la [documentation](https://www.archivistes.org/Ressources-Registres-des-entrees) pour l’accompagnement
+
+* Accompagnement [schema.data.gouv.fr](https://schema.data.gouv.fr/Archivistes75/registre_entrees/)
+
+* Projet en parallèle : réalisation d’un tableau de bord pour visualiser les données
+
+]
+
+.pull-right[
+
+![](img/registre10.png)
+]
+
+---
+
+### Etape 8 - Diffusion du schéma auprès des éditeurs
+
+.pull-left[
+
+Le SIAF a organisé 2 rencontres avec les éditeurs des SIA pour les inciter à implémenter le standard dans leurs outils
+
+]
+
+.pull-right[
+
+![](img/registre11.png)
+
+]
+
+---
+
+### Le schéma, 10 mois plus tard
+
+Des premières publications !
+
+![](img/registre12.png)
+
+---
+
+### Ressources sur le schéma
+
+Sur le site du SIAF :
+
+* [](https://francearchives.fr/fr/article/293123114)
+* [](https://francearchives.fr/fr/actualite/547884351)
+
+Sur le site de l’AAF :
+
+* Le [repo Github](https://github.com/Archivistes75/registre_entrees)
+
+
+
+**Schema.data.gouv.fr**
+
+* [](https://schema.data.gouv.fr/Archivistes75/registre_entrees/)
+
+---
+
+class: inverse, center, middle
+
+# A vous de jouer !
+
+---
+
+class: inverse, center, middle
+
+# Ressources
+
+---
+
+
+### Ressources
+
+* [**Guide pratique dédié à l’ouverture des données publiques culturelles**](http://www.culture.gouv.fr/Media/Thematiques/Innovation-numerique/Folder/Guide-pratique-dedie-a-l-ouverture-des-donnees-publiques-culturelles)
+Publié par le ministère de la Culture, juillet 2019 
+
+* [**Outil pédagogique facilitant la compréhension des droits de propriété littéraire et artistique applicables aux contenus culturels dont la diffusion est souhaitée**](https://www.culture.gouv.fr/droitsdediffusion/) 
+
+* [**Numérisation et valorisation des contenus culturels : guide ouverture et réutilisation des informations publiques numériques du secteur culturel**](http://www.culture.gouv.fr/Media/Thematiques/Innovation-numerique/Folder/Livrables-GT-Numerisation/Numerisation-et-valorisation-des-contenus-culturels-guide-ouverture-et-reutilisation-des-informations-publiques-numeriques-du-secteur-culturel),publié par le ministère de la Culture, 2017
+
+* [**Guide de bonnes pratiques en matière de propriété littéraire et artistique**](http://www.culture.gouv.fr/Media/Thematiques/Innovation-numerique/Folder/Livrables-GT-Numerisation/Guide-de-bonnes-pratiques-en-matiere-de-propriete-litteraire-et-artistique), publié par le ministère de la Culture, 2017
+
+* [**Rapport "Ouverture et partage des données publiques culturelles"**](https://www.culture.gouv.fr/content/download/94768/file/201312_Rapport_Open_Data_Culturel.pdf), publié par le ministère de la Culture, décembre 2013
+
+---
+
+### Ressources
+
+* [**Rapport open content dans les institutions culturelles en France**](https://upload.wikimedia.org/wikipedia/commons/9/94/Rapport_sur_l%E2%80%99open_content_dans_les_institutions_culturelles_en_France_-_%C3%89tat_des_lieux_des_pratiques_num%C3%A9riques_et_d%E2%80%99ouverture_de_contenus.pdf), Wikimédia, 2022
+
+* [**Retour d'expérience sur la mise en ligne des collections du musée de Bretagne**](https://musee-devoile.blog/wp-content/uploads/2021/05/fiches_juridiques_musee_de_bretagne.pdf)
+
+* [**Penser demain, L’Open Innovation dans les Musées & Institutions Culturelles**](https://www.icart.fr/actualites/elaboration-dun-livre-blanc-sur-lopen-innovation), l'ICART 
+
+* [**Guide pratique pour la recherche et la réutilisation des images d’œuvres d’art**](https://www.inha.fr/fr/actualites/actualites-de-l-inha/en-2021/guide-pratique-pour-la-recherche-et-la-reutilisation-des-images-d-uvres-d-art.html), INHA
+
+* [**Droits des images, histoire de l’art et société**](https://www.inha.fr/_attachments/de-nouvelles-democraties-du-savoir-actualite/rapport_images_usages221018.pdf)
+
+
+---
+
+class: inverse, center, middle
+
+# Merci !
+
+Contact : [samuel@datactivist.coop](mailto:samuel@datactivist.coop) [annelaure@datactivist.coop](mailto:annelaure@datactivist.coop)
