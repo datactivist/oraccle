@@ -568,13 +568,13 @@ class: inverse, left, middle
 #### .center[http://editor.highcharts.com/full.html]
 
 ---
-## .red[Tableau public]
+### .red[Tableau public]
 .center[.reduite[![](./img/Tableau.PNG)]]
 #### .center[https://public.tableau.com/fr-fr/s/]
 
 ---
 
-## .red[Infogram]
+### .red[Infogram]
 .center[.reduite[![](./img/Infogram.png)]]
 #### .center[https://infogram.com]
 
@@ -599,11 +599,7 @@ class: inverse, left, middle
 .pull-left[
 - **Pour** :  des données avec différentes catégories ou dénominations
 
-
-
 - **Avantages** : simple à créer et à comprendre
-
-
 
 - **Règles** :
   1. Ne pas surcharger
@@ -618,12 +614,16 @@ class: inverse, left, middle
 
 Ou diagramme en bâtons, à barres…
 
+L’axe vertical d’un graphique doit toujours commencer à zéro, s’applique uniquement pour des valeurs pour lesquelles le zéro à une valeur intrinsèque, et signifie l’absence de quantité.
+
 ---
 
-### Atelier sur les résultats des élections présidentielles de 2017
+### Atelier sur les résultats de l'élection présidentielle de 2022
 
 .pull-left[
 - Allez sur http://www.interieur.gouv.fr/Elections/Les-resultats/Presidentielles
+
+- Cliquez sur "Résultats de l'élection présidentielle 2022"
 
 - Choisissez votre département sur la carte
 
@@ -636,92 +636,82 @@ Ou diagramme en bâtons, à barres…
 .reduite[![](./img/1er_tour.PNG)]
 ]
 
-
 ---
 
-### Atelier sur les résultats des élections présidentielles de 2017
+### Atelier sur les résultats de l'élection présidentielle de 2022
 
 .pull-left[
-- Allez sur www.datawrapper.de et cliquez sur "**create a chart**"
+- Allez sur www.datawrapper.de et cliquez sur "**Start creating**"
 
-- Coller les données copiez précédemment (tableau des résultats du 1er tour des élections)
+- Collez les données copiées précédemment
 
 - Cliquez sur "**Proceed**"
 
-- Cliquez sur "**add a column**"
+- Cliquez sur "**Add column**"
 
-- Nommer la nouvelle colonne et remplissez les cellules de la nouvelle colonne
+- Nommer la nouvelle colonne "Parti" et remplissez les cellules de la nouvelle colonne avec le nom des partis politiques
 
 - Cliquez sur "**Proceed**"
 
 ]
 .pull-right[
-.reduite[![](./img/create-chart.PNG)]
 .reduite[![](./img/coller_resultats.PNG)]
+<br />
 .reduite[![](./img/modif_resultats.PNG)]
 ]
 
 ---
 
-### Atelier sur les résultats des élections présidentielles de 2017
+### Atelier sur les résultats de l'élection présidentielle de 2022
 
 .pull-left[
-- Choisissez le type de visualisation "**Bar Chart**". Vous pouvez tester d'autres visualisation si vous voulez.
+- Choisissez le type de visualisation "**Diagramme en barres**". Vous pouvez tester d'autres visualisation si vous voulez.
 
 - Cliquez sur "**Proceed**"
 
 <Br>
 <Br>
 
-- **Bravo! Vous avez réalisé votre première data visualisation !**
+**Bravo ! Vous avez réalisé votre première visualisation de données avec Datawrapper !**
 
 ]
 .pull-right[
 .reduite[![](./img/Chart_type.PNG)]
-<Br>
-.reduite[![](./img/Resultats_1er.PNG)]
 ]
 
+???
+
+Par rapport à Excel, Datawrapper prend en main et montre les étapes à suivre.
 ---
 ### .red[Les cartes]
 
 .pull-left[
-- **Pour** :  des données assignées à des aires géographiques
+- **Pour** : des données assignées à des aires géographiques
 
-
-
-- **Avantages** : simple à comprendre, joli.
-
-
+- **Avantages** : simple à comprendre, joli
 
 - **Règles** :
   1. Simple à réaliser avec des données par pays
-  2. Ne visualiser qu’un indicateur par carte. Sinon utiliser des types de représentation différents
+  2. Ne visualiser qu’un indicateur par carte ; sinon utiliser des types de représentation différents
 ]
 <Br>
 .pull-right[.reduite[![](./img/IGN_carte1.PNG)]]
 
-
 ---
 
-### Atelier sur les mesures annuelles des polluants principaux en région Sud
+### Atelier sur les stations Vélib'
 
 .pull-left[
-- Allez sur https://datasud.fr
+- Allez sur https://www.data.gouv.fr/
 
-- Rechercher le jeu de données "Mesures annuelles des polluants principaux en région Sud"
+- Trouvez le jeu de données "Vélib - Vélos et bornes - Disponibilité temps réel"
 
-- Cliquer sur "télécharger" pour le fichier **geojson** "mesures annuelles de monoxyde de carbone (CO)"
-
-- Cliquez sur "Enregistrer" (en haut à guche de la fenêtre)
-
-- Modifier l'entension de fichier ".application" en ".geojson"
+- Téléchargez le fichier "Export au format GeoJSON"
 ]
 
 .pull-right[
-.reduite[![](./img/Datasud.PNG)]
-.reduite[![](./img/Datasud_CO.PNG)]
-.reduite[![](./img/Datasud_geojson.PNG)]
+.reduite[![](./img/DGF_recherche.png)]
+.reduite[![](./img/DGF_Fichiers.png)]
 ]
 
 
@@ -735,9 +725,9 @@ Ou diagramme en bâtons, à barres…
 
 - Cliquez sur "**Créer ma carte**"
 
-- Sur la barrre de droite cliquez sur "**accéder à l'outil statistique**" (icône diagramme à barre)
+- Sur la barre de droite, cliquez sur "**Accéder à l'outil statistique**" (icône diagramme à barres)
 
-- Cliquez sur "**Charger un fichier**" et aller chercher le fichier .geojson enregistré depuis la plateforme Datasud.
+- Cliquez sur "**Charger un fichier**" et aller chercher le fichier .geojson enregistré
 ]
 
 
@@ -754,19 +744,22 @@ Ou diagramme en bâtons, à barres…
 .pull-left[
 - Choisissez le type de carte "**symbole**"
 
-- Choisissez l'attribut "**10-valeur**"
+- Choisissez l'attribut "**8-capacity**" pour visualiser la taille des stations Vélib' ; vous pouvez tester d'autres attributs
 
-- Vous pouvez modifier les "**paramètres**"
+- Vous pouvez modifier les "**Paramètres**", par ex. pour ajouter une fenêtre popup
 
-- Cliquez sur l'icône "**enregistrer**" pour exporter la carte au format .png ou .jpg
-<Br>
-- **Bravo! Vous venez de réaliser votre première carte!**
+- Cliquez sur l'icône "**enregistrer**" pour exporter la carte
+
+**Bravo ! Vous venez de réaliser votre première carte !**
 ]
 
 .pull-right[
-.reduite[![](./img/IGN_carte_couleur.PNG)]
-.reduite[![](./img/IGN_carte1.PNG)]
+.reduite[![](./img/IGN_Velib.png)]
 ]
+
+???
+
+Autre exemple de carte avec le Géoportail : https://datactivist.coop/kit_bibliotheque_data/kit/docs/diagnostic-de-lenvironnement.html
 
 ---
 class: inverse, center, middle
