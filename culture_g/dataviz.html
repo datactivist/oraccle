@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Culture générale des données et de la visualisation de données</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Sylvain Lapoix, Samuel Goëta, Antoine Blanchard – Datactivist" />
+    <meta name="date" content="2022-06-08" />
+    <script src="libs/header-attrs-2.14/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/datactivist.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/datactivist-fonts.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, orientation=auto"/>
+    <meta name="description" content="Formation &quot;Culture générale de la dataviz&quot;"/>
+    <meta name="github-repo" content="datactivist/oraccle"/>
+    <meta name="twitter:title" content="Culture générale de la visualisation de données"/>
+    <meta name="twitter:description" content="Formation &quot;Culture générale de la dataviz&quot;"/>
+    <meta name="twitter:url" content="https://datactivist.coop/oraccle/1"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:creator" content="@datactivi_st"/>
+    <meta name="twitter:site" content="@datactivi_st"/>
+    <meta property="og:title" content="Culture générale de la visualisation de données"/>
+    <meta property="og:description" content="Formation &quot;Culture générale de la dataviz&quot;"/>
+    <meta property="og:url" content="https://datactivist.coop/oraccle/1"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="fr_FR"/>
+    <meta property="og:site_name" content="Datactivist"/>
+    <meta property="article:author" content="Datactivist"/>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Culture générale des données et de la visualisation de données
+## Culture générale de la dataviz
+### Sylvain Lapoix, Samuel Goëta,<br />Antoine Blanchard – Datactivist
+### 08 Jun 2022
+
+---
+
+
+
+
+
+layout: true
+
+&lt;div class='my-footer'&gt;&lt;span&gt;Formation "Culture générale de la dataviz"&lt;/span&gt; &lt;center&gt;&lt;div class=logo&gt;&lt;img src='https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/fond_noir_monochrome.png' width='0px'&gt;&lt;/center&gt;&lt;/span&gt;&lt;/div&gt; 
+
+---
+
+class:center, middle
+
+Ces slides en ligne : http://datactivist.coop/oraccle
+
+Sources : https://github.com/datactivist/oraccle
+
+
+Les productions de Datactivist sont librement réutilisables selon les termes de la licence [Creative Commons 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode.fr).
+
+&lt;br /&gt;
+&lt;br /&gt;
+
+.reduite[![](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)]
+---
+
+class: inverse, left, middle
+
+# Comprendre la démarche de visualisation de données
+
+???
+
+Que signifie visualiser des données ?
+
+---
+
+## Commençons par un exercice de visualisation
+
+--
+
+Selon l'Organisation internationale des migrations, 3108 migrant·e·s ont trouvé la mort ou sont disparu·e·s durant le premier semestre 2017.
+
+--
+- 2259 en Méditerranée
+- 225 en Afrique du Nord
+- 148 à la frontière américano-mexicaine
+- 136 en Afrique subsaharienne
+- 103 dans la Corne de l'Afrique
+- 91 dans les Caraïbes
+- 45 en Asie du Sud-Est
+- 34 en Amérique centrale
+- 33 en Europe
+- 31 au Moyen-Orient
+- un·e en Amérique du Nord
+- un·e en Asie du Sud
+- un·e en Asie de l'Est.
+
+---
+
+### Une autre représentation
+
+.center.reduite[![](./img/Migrants_Guardian1.png)]
+
+.footnote[*The Guardian*, "[Migrant sea route to Italy is world's most lethal](https://www.theguardian.com/world/2017/sep/11/migrant-death-toll-rises-after-clampdown-on-east-european-borders)", 11/09/2017].
+---
+
+### Que s'est-il passé ?
+
+- Notre cerveau a tenté de se .red[**représenter**] les données qui nous étaient fournies. Il a utilisé ses capacités *d'imagination*.
+
+--
+
+- La carte propose une .red[**représentation**] visuelle des mêmes données.
+
+--
+
+- Cette représentation s'avère cependant plus fidèle, plus lisible et plus éloquente. Elle fait le travail qu'a tenté d'accomplir notre cerveau mais en y ajoutant des précisions, une clarté et un message .red[**hors de sa capacité de traitement**].
+
+--
+
+- La datavisualisation agit donc comme un .red[**outil cognitif**] pour nous aider à comprendre les données.
+
+--
+
+- C'est ce qu'*Alberto Cairo* nomme la .red[**valeur fonctionnelle**] de la datavisualisation.
+
+
+.footnote[Alberto Cairo, *The functional Art*, 2012 ;
+*The truthful art*, 2016. À retrouver [sur son site web](http://www.thefunctionalart.com/)].
+
+---
+## Démarche d'encodage / décodage
+
+- La visualisation de la donnée consiste en un .red[**encodage**], c'est-à-dire une "conversion" d'un format à un autre.
+
+--
+
+- En l'occurrence, le passage d'une forme brute non interprétée (les *data*), à une forme raffinée interprétée (la *dataviz*).
+
+--
+- Comme dans le journalisme, la mise en forme implique également un **angle**, un *message* que doit transmettre l'image.
+
+--
+
+- Nous avons donc trois ingrédients indispensables à la démarche :
+1. des données ;
+2. une mise en forme ;
+3. un message.
+
+???
+
+Par conséquent, trois compétences à maîtriser : la donnée, la mise en forme, le message.
+
+---
+
+### Un exemple simple
+
+Le *New York Times* a publié un article sur l'impact du Covid-19 sur les plus de 65 ans.
+
+.center.reduite[
+![](./img/NYT_omicron.png)
+]
+
+???
+
+* Données : CDC
+* Mise en forme : deux courbes superposées
+* Message : impact sur les &gt; 65 ans
+
+---
+
+## Qu'est-ce qu'une bonne dataviz ?
+
+### **Trois qualités indispensables**
+
+.center.reduite3[
+![](./img/Venn_Dataviz.png)
+]
+
+---
+class: inverse, center, middle
+
+# Premier objectif :
+# la rigueur
+
+---
+## Comprendre la nature et le sens des données
+
+- La dataviz étant un encodage, elle substitue aux données des équivalences visuelles.
+
+--
+
+- L'encodage doit permettre :
+1. de comprendre **la nature** des données ;
+2. d'apprécier **le rapport** qu'elles entretiennent entre elles ;
+3. de saisir les points saillants et **phénomènes** clefs ;
+4. le tout sans déperdition de sens.
+
+--
+
+- Chacun de ces aspects repose sur des caractéristiques visuelles liées à des représentations.
+
+---
+
+### Expliciter la nature de la donnée
+
+.pull-left[![](./img/BlackBoys_NYT.png)
+([source](https://www.nytimes.com/interactive/2018/03/19/upshot/race-class-white-and-black-men.html))]
+
+.pull-right[L'encodage doit permettre de saisir immédiatement le sens de chaque élément : 
+* où sont les points de données ? 
+* que représentent-ils individuellement / collectivement ?
+
+.footnote[La dataviz explicite ici le phénomène lui-même. Il s'agit du point de départ de la démarche journalistique. Les causes, elles, sont explorées et détaillées dans le texte.
+]
+]
+
+???
+
+Faire participer le public
+
+---
+
+### Choisir la représentation adaptée au phénomène
+
+Un mauvais choix graphique peut fausser la représentation de la donnée en ne donnant pas à constater le phénomène qu'elles permettent de décrire.
+
+.center.reduite2[
+[![](./img/NetworkAnalysis_metal.jpg)](http://www.geologyin.com/2015/11/network-analysis-shows-systemic-risk-in.html)
+]
+
+???
+
+Le graphe veut faire passer l'idéer d'un risque systémique ? On ne la voit pas du tout.
+
+---
+
+### Choisir le bon niveau de granularité
+
+Le niveau de précision minimale d'une donnée (aussi appelé **.red[granularité]**) peut modifier de façon radicale la lecture d'une phénomènne.
+Dans le cas d'une carte, le choix de l'échelle peut mener à la généralisation de phénomène extrêmement circonscrits (ou inversement) comme le montre cet [exemple sur le blog de Datawrapper](https://blog.datawrapper.de/weekly-chart-europegrowth/)
+
+.pull-left[
+![](./img/Scale1.png)
+]
+
+--
+
+.pull-right[
+![](./img/Scale2.png)
+]
+
+---
+
+### Des graphs ni faits ni à faire
+
+Le choix de l'échelle est aussi celui de son étendue. Il peut être tentant pour amplifier un phénomène d'en augmenter l'amplitude artificiellement en réduisant l'échelle.
+L'exemple le plus courant est le ".red[data-does-not-start-at-zero]". Si ce choix peut se justifier, il est bien souvent utilisé comme méthode de manipulation.
+
+.pull-left[![](./img/Hortefeux.jpg)]
+.pull-right[![](./img/Delinquence.jpg)]
+
+
+.footnote[Jean-Marc Manach, "[Plus la délinquance baisse, plus la violence augmente](https://web.archive.org/web/20140917235356/http://owni.fr/2011/01/25/plus-la-delinquance-baisse-plus-la-violence-augmente/)", *Owni*, Janvier 2011
+]
+
+---
+
+### Des graphs ni faits ni à faire
+
+.pull-left[
+![](./img/Apple.jpg)
+
+.footnote[Vandy Berten, "[Comment mentir avec un graphique](https://www.smalsresearch.be/comment-mentir-avec-un-graphique/)", *Smals Research*, Juillet 2015]
+
+]
+
+--
+
+.pull-right[
+![](./img/Apple2.jpg)
+]
+
+???
+
+Les portions placées vers l'avant sont augmentées d’une “tranche” que n’ont pas les segments opposés, et la perspective diminue la surface des segments les plus éloignés. 
+
+---
+class: inverse, center, middle
+
+# Deuxième objectif :
+# la lisibilité
+
+---
+
+### Un arbitrage nécessaire
+
+L'allégorie de la carte "à l'échelle 1:1" de Borges donne une bonne idée du problème :
+
+.left-column[
+![](./img/BorgesAleph.jpg)
+
+.footnote[Jose Luis Borges, "De la rigueur de la science", 1946]
+
+]
+
+.right-column[
+&gt; En cet empire, l'Art de la Cartographie fut poussé à une telle Perfection que la Carte d'une seule Province occupait toute une ville et la Carte de l'Empire toute une Province. Avec le temps, ces Cartes Démesurées cessèrent de donner satisfaction et les Collèges de Cartographes levèrent une Carte de l'Empire, qui avait le Format de l'Empire et qui coïncidait avec lui, point par point.
+]
+
+
+---
+
+### Un arbitrage nécessaire
+
+Lewis Carroll en donnait déjà une version absurde :
+
+.left-column[
+![](./img/Carroll.jpg)
+.footnote[Lewis Carroll, *Sylvie et Bruno*, 1893]
+]
+
+.right-column[
+&gt; — "Et puis est venue l'idée la plus grandiose de toutes. En fait, nous avons réalisé une carte du pays, à l'échelle d'un mile pour un mile !"
+
+&gt; — "L'avez-vous beaucoup utilisée ?" demandai-je.
+
+&gt; — "Elle n'a jamais été dépliée jusqu'à présent", dit Mein Herr. "Les fermiers ont protesté : ils ont dit qu'elle allait couvrir tout le pays et cacher le soleil ! Aussi nous utilisons maintenant le pays lui-même, comme sa propre carte, et je vous assure que cela convient presque aussi bien."
+]
+
+???
+
+Toute carte est une modélisation et donc – par définition – une abstraction et une simplification de la réalité. Une carte sans réduction d’échelle n’aurait ni intérêt ni pertinence. 
+
+---
+
+### 1&lt;sup&gt;er&lt;/sup&gt; risque : "l'overplotting"
+
+En statistique, le terme "overplotting" se réfère à l'effet produit par l'intégration d'un trop grand nombre de points de données dans un graph le rendant illisible.
+
+*Note : c'est un vrai terme de stat, vous pouvez l'utiliser pour vous la jouer.*
+
+--
+
+Exemple : une heat-map qui ne sert à rien
+
+[![](./img/Heatmap_2.png)](https://twitter.com/Eurosport_FR/status/1009836270376366081/)
+
+???
+
+Carte de chaleur = matrice dont les cellules sont colorées en fonction des valeurs de la variable représentée
+
+---
+
+### 2&lt;sup&gt;e&lt;/sup&gt; risque : "l'overcomplicated"
+
+L'autre risque courant est de multiplier les dimensions et axes de lecture jusqu'à rendre le graphique incompréhensible.
+
+--
+
+*Note : ce terme n'a rien d'officiel, ne l'utilisez pas pour vous la jouer.*
+
+--
+
+.pull-left[![](./img/OverComplicated3.jpg)]
+
+.pull-right[[![](./img/OverComplicated2.jpg)](https://twitter.com/DevilleSy/status/1524283900238999560)]
+
+---
+
+### 3&lt;sup&gt;e&lt;/sup&gt; risque : l'excès d'esthétisme
+
+La tentation de mêler précision et esthétique peut produire de très beaux graphs… trop compliqués pour être compris du premier coup.
+
+--
+
+.center.reduite2[
+[![](./img/NebuleusePublicPrive.png)](https://pegasusdata.com/2012/11/25/opendata-copinage-au-gouvernement-quand-lanalyse-de-reseau-vient-en-aide-au-journalisme-dinvestigation/)
+]
+
+???
+
+Un super papier, un très beau visuel mais un concept tordu
+
+---
+
+### Laissez parler les données
+
+Les fioritures peuvent constituer des distractions : quand les données sont claires, autant leur laisser le champ libre.
+
+&lt;br /&gt;
+
+.pull-left[![](./img/Simplicite1.png)]
+.pull-right[![](./img/Simplicite2.png)]
+
+.footnote[
+Nazirah Jetha, "[5 data-viz tips to let your data speak for itself](https://www.tableau.com/about/blog/2016/5/5-tips-effective-visual-data-communication-54174)", Mai 2016
+]
+
+---
+
+### Sans message, l'image devient vaine
+
+Il peut arriver que la dataviz n'ait d'intention que décorative ou spectaculaire. Précise et lisible, elle devient un panneau vide de sens et de propos qui n'explicite rien du monde faute de choisir comment parler de son sujet.
+
+--
+
+.pull-left[
+Ex. : une "visualisation concrète de la dette française" qui n'a aucun sens
+]
+.pull-right[
+[![](./img/Slate_Dette.png)](http://www.slate.fr/story/92749/dette-publique-francaise-stade-de-france)
+]
+
+---
+class: inverse, center, middle
+
+# Troisième objectif :
+# l'éloquence
+
+???
+
+Caractère de ce qui, sans paroles, est expressif, significatif, probant.
+
+---
+
+### Donner des points de repère
+
+La façon la plus simple de mettre en avant un message reste encore de l'expliciter : souligner des points saillants ou relever les infos clefs permet de guider dans la lecture.
+
+--
+
+Ex. : rubrique DataMatch de Paris Match
+
+[![](./img/AeroportDataMatch.png)](https://askmedia.fr/blog/ask-media-pour-paris-match-ya-t-il-trop-daeroports-en-france/)
+
+???
+
+Paris Match veille à semer des focus ou à donner des clefs de lecture.
+
+---
+
+### La symbolique comme message
+
+Le choix d'une représentation figurative allégorique plutôt que littérale peut constituer en soi l'angle d'une dataviz. Claire et bien choisie, la référence agit alors comme un sous-texte à l'image.
+
+--
+
+*Cf.* exemples ci-après.
+
+---
+
+Pour illustrer la censure en Iran, l'équipe de *Journalism is not a crime* a adopté l'esthétique des mosaïques d'Ispahan, faisant écho à l'imaginaire visuel du pays et à sa grandeur. Contrepied de la politique de censure menée par le régime ainsi dénoncé.
+
+&lt;br /&gt;
+
+.center[
+[![](./img/censorship_iran.png)](https://visualization.journalismisnotacrime.com/)
+]
+
+---
+
+En proposant de visualiser l'immigration comme des anneaux de croissance plutôt que comme des flux, le designer d'information Pedro Cruz modifie la lecture d'un phénomène, basculant d'un registre visuel de la pression à une référence à la consolidation
+
+.center.reduite[
+[![](./img/ImmigrationTree.jpeg)](https://twitter.com/i/web/status/1010012782253826048)
+]
+
+---
+
+## Permettre l'exploration
+
+Des visualisations interatives peuvent inviter à l'exploration.
+
+Ex. : *El Pais* a souhaité aborder la question du logement à Madrid en prenant le point de vue des habitant·es en recherche de logement.
+
+[![](./img/elpais_donde.png)](https://elpais.com/economia/2021-11-21/quien-puede-alquilar-y-donde-el-mapa-del-acceso-a-la-vivienda-calle-a-calle-y-familia-por-familia.html)
+
+---
+
+### Faire appel à d'autres sens
+Le message peut aussi passer par d'autres sens que la vue : l'ouïe, le toucher…
+
+Ex. : le designer d'information Duncan Geere [a mis en son](https://blog.duncangeere.com/london-under-the-microscope/) une année de Covid-19 à Londres (une seconde = un jour) avec une ligne de basse pour les déplacements, deux notes séparées par un octave pour les cas et les décès, et des "pings" qui représentant des événements soudains (confinement, variant…).
+
+.center[&lt;iframe src="https://player.vimeo.com/video/571217327?h=21098203b9&amp;color=e6e0e0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;]
+
+---
+
+## Quel message veut-on faire passer?
+
+
+- Une dataviz porte avant tout une **intention**, la volonté de transmettre une information.
+
+--
+
+- De cette intention découlera le **type de dataviz** à utiliser.
+
+--
+&lt;br /&gt;
+&lt;div style="text-align: center"&gt;
+ &lt;img src="img/Intention.PNG" width="600"/&gt;
+&lt;/div&gt;
+
+---
+
+class: inverse, left, middle
+
+# Panorama des fonctions et des formats de visualisation de données
+
+---
+
+### Panorama des fonctions et formats
+
+**Connaissez-vous le "Data Viz Project" ?**
+https://datavizproject.com/
+
+.pull-left[
+- Comparaison
+- Visualisation de concept
+- Corrélation
+- Distribution
+- Données géographiques
+- Une partie d'un ensemble
+- Changement de valeur dans le temps
+]
+
+
+.pull-right[
+.center[.reduite[![](./img/DataVizProject_p1.png)]]
+]
+
+---
+### Panorama des fonctions et formats
+
+**Connaissez-vous le projet "From Data to Viz" ?** 
+https://www.data-to-viz.com
+
+
+.center[.reduite2[![](./img/FromDatatoViz.PNG)]]
+
+---
+
+class: inverse, left, middle
+
+# Panorama des outils de visualisation de données
+
+
+---
+### Des outils en fonction des usages
+.center[.reduite[![](./img/Tous_les_outils.PNG)]]
+
+---
+### .red[RAWGraphs]
+.center[.reduite[![](./img/RAWGraphs.PNG)]]
+#### .center[https://rawgraphs.io/]
+
+---
+### .red[Flourish]
+.center[.reduite[![](./img/Flourish.PNG)]]
+#### .center[https://app.flourish.studio/templates]
+
+---
+### .red[Datawrapper]
+.center[.reduite[![](./img/Datawrapper.PNG)]]
+#### .center[https://www.datawrapper.de/]
+
+---
+### .red[Highcharts]
+.center[.reduite[![](./img/HighCharts.PNG)]]
+#### .center[http://editor.highcharts.com/full.html]
+
+---
+## .red[Tableau public]
+.center[.reduite[![](./img/Tableau.PNG)]]
+#### .center[https://public.tableau.com/fr-fr/s/]
+
+---
+
+## .red[Infogram]
+.center[.reduite[![](./img/Infogram.png)]]
+#### .center[https://infogram.com]
+
+---
+## .red[Khartis]
+.center[.reduite[![](./img/Khartis.PNG)]]
+#### .center[http://www.sciencespo.fr/cartographie/khartis/]
+
+---
+## .red[macarte.ign]
+.center[.reduite[![](./img/IGN.PNG)]]
+#### .center[https://macarte.ign.fr]
+
+---
+class: inverse, left, middle
+
+# Ateliers pour réaliser facilement des visualisations de données
+
+---
+### .red[L'histogramme]
+
+.pull-left[
+- **Pour** :  des données avec différentes catégories ou dénominations
+
+
+
+- **Avantages** : simple à créer et à comprendre
+
+
+
+- **Règles** :
+  1. Ne pas surcharger
+  2. Nommer systématiquement les axes
+  3. Commencer vos axes à 0 (quand il s'agit de données quantifiables)
+]
+&lt;Br&gt;
+&lt;Br&gt;
+.pull-right[.reduite[![](./img/diagramme_barre.png)]]
+
+???
+
+Ou diagramme en bâtons, à barres…
+
+---
+
+### Atelier sur les résultats des élections présidentielles de 2017
+
+.pull-left[
+- Allez sur http://www.interieur.gouv.fr/Elections/Les-resultats/Presidentielles
+
+- Choisissez votre département sur la carte
+
+- Sélectionner et copiez le tableau avec l'ensemble des candidats du 1er tour.
+]
+
+
+.pull-right[
+.reduite[![](./img/choix_dep.PNG)]
+.reduite[![](./img/1er_tour.PNG)]
+]
+
+
+---
+
+### Atelier sur les résultats des élections présidentielles de 2017
+
+.pull-left[
+- Allez sur www.datawrapper.de et cliquez sur "**create a chart**"
+
+- Coller les données copiez précédemment (tableau des résultats du 1er tour des élections)
+
+- Cliquez sur "**Proceed**"
+
+- Cliquez sur "**add a column**"
+
+- Nommer la nouvelle colonne et remplissez les cellules de la nouvelle colonne
+
+- Cliquez sur "**Proceed**"
+
+]
+.pull-right[
+.reduite[![](./img/create-chart.PNG)]
+.reduite[![](./img/coller_resultats.PNG)]
+.reduite[![](./img/modif_resultats.PNG)]
+]
+
+---
+
+### Atelier sur les résultats des élections présidentielles de 2017
+
+.pull-left[
+- Choisissez le type de visualisation "**Bar Chart**". Vous pouvez tester d'autres visualisation si vous voulez.
+
+- Cliquez sur "**Proceed**"
+
+&lt;Br&gt;
+&lt;Br&gt;
+
+- **Bravo! Vous avez réalisé votre première data visualisation !**
+
+]
+.pull-right[
+.reduite[![](./img/Chart_type.PNG)]
+&lt;Br&gt;
+.reduite[![](./img/Resultats_1er.PNG)]
+]
+
+---
+### .red[Les cartes]
+
+.pull-left[
+- **Pour** :  des données assignées à des aires géographiques
+
+
+
+- **Avantages** : simple à comprendre, joli.
+
+
+
+- **Règles** :
+  1. Simple à réaliser avec des données par pays
+  2. Ne visualiser qu’un indicateur par carte. Sinon utiliser des types de représentation différents
+]
+&lt;Br&gt;
+.pull-right[.reduite[![](./img/IGN_carte1.PNG)]]
+
+
+---
+
+### Atelier sur les mesures annuelles des polluants principaux en région Sud
+
+.pull-left[
+- Allez sur https://datasud.fr
+
+- Rechercher le jeu de données "Mesures annuelles des polluants principaux en région Sud"
+
+- Cliquer sur "télécharger" pour le fichier **geojson** "mesures annuelles de monoxyde de carbone (CO)"
+
+- Cliquez sur "Enregistrer" (en haut à guche de la fenêtre)
+
+- Modifier l'entension de fichier ".application" en ".geojson"
+]
+
+.pull-right[
+.reduite[![](./img/Datasud.PNG)]
+.reduite[![](./img/Datasud_CO.PNG)]
+.reduite[![](./img/Datasud_geojson.PNG)]
+]
+
+
+
+---
+
+### Atelier sur les mesures annuelles des polluants principaux en région Sud
+
+.pull-left[
+- Allez sur https://macarte.ign.fr
+
+- Cliquez sur "**Créer ma carte**"
+
+- Sur la barrre de droite cliquez sur "**accéder à l'outil statistique**" (icône diagramme à barre)
+
+- Cliquez sur "**Charger un fichier**" et aller chercher le fichier .geojson enregistré depuis la plateforme Datasud.
+]
+
+
+.pull-right[
+.reduite[![](./img/IGN.PNG)]
+.reduite[![](./img/IGN_acces_stat.PNG)]
+.reduite[![](./img/IGN_charger_fichier.PNG)]
+]
+
+---
+
+### Atelier sur les mesures annuelles des polluants principaux en région Sud
+
+.pull-left[
+- Choisissez le type de carte "**symbole**"
+
+- Choisissez l'attribut "**10-valeur**"
+
+- Vous pouvez modifier les "**paramètres**"
+
+- Cliquez sur l'icône "**enregistrer**" pour exporter la carte au format .png ou .jpg
+&lt;Br&gt;
+- **Bravo! Vous venez de réaliser votre première carte!**
+]
+
+.pull-right[
+.reduite[![](./img/IGN_carte_couleur.PNG)]
+.reduite[![](./img/IGN_carte1.PNG)]
+]
+
+---
+class: inverse, center, middle
+
+# Merci !
+
+#### Contact : [antoine@datactivist.coop](mailto:antoine@datactivist.coop)
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script src="matomo.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"anchor_sections": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
