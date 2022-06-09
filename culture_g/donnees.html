@@ -4,7 +4,6 @@
     <title>Culture générale des données et de la visualisation de données</title>
     <meta charset="utf-8" />
     <meta name="author" content="Samuel Goëta, Joël Gombin, Antoine Blanchard – Datactivist" />
-    <meta name="date" content="2022-06-07" />
     <script src="libs/header-attrs-2.14/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/datactivist.css" rel="stylesheet" />
@@ -17,7 +16,7 @@ class: center, middle, inverse, title-slide
 # Culture générale des données et de la visualisation de données
 ## Culture générale des données
 ### Samuel Goëta, Joël Gombin,<br />Antoine Blanchard – Datactivist
-### 07 Jun 2022
+### 09 jui 2022
 
 ---
 
@@ -94,7 +93,7 @@ class:center, middle, inverse
 * smartphone, montre connectée, webcam, ordinateur
 * étage, numéro de salle, taille des individus, sexe des individus, jauge de la salle, adresse, adresse IP, heure de démarrage, heure de fin (pas la durée qui est une mesure dérivée), volume bouteille d'eau, valeurs étiquettes vêtements, numéro de série téléphone, numéro SS sur carte vitale
 
-/!\ La donnée collectée doit être déjà produite. Les informations déclaratives ne sont pas une donnée, comme “Ce mur est blanc”.
+/!\ La donnée collectée doit être déjà produite. Les informations déclaratives, les appréciations subjectives, ne sont pas une donnée, comme “Ce mur est blanc”.
 
 ---
 
@@ -110,7 +109,7 @@ Attribuée à [Russell Ackoff](http://en.wikipedia.org/wiki/Russell_L._Ackoff) e
 - la **.red[donnée]** est la matière "brute" de l'information conçue plutôt pour des machines
 - **.red[l'information]** sont des données qui ont été interprétées pour dégager du sens pour des humains
 - en donnant du sens à de l'information, on obtient de la **.red[connaissance]**
-- en donnant du sens à la connaissance on obtient de la **.red[sagesse]** (ou compétence.]
+- en donnant du sens à la connaissance on obtient de la **.red[sagesse]** (ou compétence).]
 
 ---
 
@@ -141,7 +140,7 @@ L'informatique consiste dans le traitement de l'information, ou de la donnée. L
 --
 
 .right-column[
-![](./img/wooclap_2.png)
+![](./img/wooclap_1.png)
 ]
 
 ???
@@ -258,7 +257,7 @@ Ce qui est évident, va de soi, est accepté sans discussion.
 &gt; L'existence d'une donnée est indépendante de toute considération de la vérité ontologique correspondante. Lorsqu'un fait s'avère être faux, il cesse d'être un fait. 
 Les fausses données n'en restent pas moins des données.
 
-.footnote[[Rosenberg (2013), "Data before the fact"](https://mitpress.mit.edu/books/raw-data-oxymoron)]
+.footnote[[Rosenberg (2013), "Data before the fact", dans Lisa Gitelman (dir.) (2013), *"Raw Data" is an oxymoron*, MIT Press](https://mitpress.mit.edu/books/raw-data-oxymoron)]
 
 ???
 Un usage connu à partir du 18e siècle. Renvoie à des expériences, des collectes d'éléments.
@@ -282,7 +281,7 @@ Class:
 
 .footnote[© Xavier Gorce 2018]]
 
-.footnote[[L. Gitelman (2013), *"Raw Data" is an&lt;br /&gt;oxymoron", MIT Press](https://mitpress.mit.edu/books/raw-data-oxymoron)]
+.footnote[[Lisa Gitelman (dir.) (2013), *"Raw Data" is an&lt;br /&gt;oxymoron*, MIT Press](https://mitpress.mit.edu/books/raw-data-oxymoron)]
 
 
 ---
@@ -301,11 +300,11 @@ Class:
 
 ### Données ou obtenues ? 
 
-&gt; Décidément, on ne devrait jamais parler de “données”, mais toujours d’ “obtenues”.
+&gt; Décidément, on ne devrait jamais parler de "données", mais toujours d’"obtenues".
 
 [Bruno Latour, 1993](http://www.bruno-latour.fr/fr/node/255)
 
-&gt; L’enjeu principal, il me semble, une fois que l’on admet que les données sont toujours des « obtenues » comme le disait Bruno Latour lorsqu’il observait le travail quotidien des scientifiques, c’est de comprendre dans quelles conditions elles deviennent malgré tout des « données » pour certains.
+&gt; L’enjeu principal, il me semble, une fois que l’on admet que les données sont toujours des "obtenues" comme le disait Bruno Latour lorsqu’il observait le travail quotidien des scientifiques, c’est de comprendre dans quelles conditions elles deviennent malgré tout des "données" pour certains.
 
 Jérôme Denis, 2018 dans un [entretien accordé à Nonfiction](https://www.nonfiction.fr/article-9517-entretien-avec-jerome-denis-a-propos-de-son-livre-le-travail-invisible.htm)
 
@@ -434,13 +433,11 @@ Class: middle, center
 
 --
 
-- Recherches internet, pratiques sportives, consommation énergie, régime alimentaire, trajets dans les transports en commun...
+- Recherches internet .red[(cookies)], pratiques sportives .red[(montres connectées)], consommation énergie .red[(compteurs connectés)], régime alimentaire .red[(appli type Yuka)], trajets dans les transports en commun .red[(Pass Navigo)]...
 
 - Cette mise en donnée est rendue possible par le développement de .red[**capteurs**] qui viennent collecter et agréger ces données.
 
 --
-
-- Recherches internet .red[(cookies)], pratiques sportives .red[(montres connectées)], consommation énergie .red[(compteurs connectés)], régime alimentaire .red[(appli type Yuka)], trajets dans les transports en commun .red[(Pass Navigo)]...
 
 - La question devient peut-être, *quels aspects de votre vie ne sont pas (encore) mis en données ?*
 
@@ -456,7 +453,7 @@ Faire une recopie d'écran de l'iPhone pour montrer l'app Santé.
 ---
 ### Le nouveau positivisme des données
 
-&gt; Nous sommes maintenant en mesure de collecter d'énormes quantités de données. Cette capacité semble comporter certaines hypothèses culturelles - à savoir que **tout ce qui peut être mesuré doit être mesuré; que les données constituent un filtre transparent et fiable nous permettant de mettre côté les émotions et l'idéologie** ; ou encore que les données nous aideront à faire des choses remarquables - comme prédire l'avenir
+&gt; Nous sommes maintenant en mesure de collecter d'énormes quantités de données. Cette capacité semble comporter certaines hypothèses culturelles - à savoir que **tout ce qui peut être mesuré doit être mesuré ; que les données constituent un filtre transparent et fiable nous permettant de mettre côté les émotions et l'idéologie** ; ou encore que les données nous aideront à faire des choses remarquables - comme prédire l'avenir
 
 David Brooks, éditorialiste du New York Times, ["The Philosophy of Data"](https://www.nytimes.com/2013/02/05/opinion/brooks-the-philosophy-of-data.html) (2013)
 
@@ -473,7 +470,7 @@ David Brooks, éditorialiste du New York Times, ["The Philosophy of Data"](https
 - **Avez-vous des exemples de données officielles pouvant faire l'objet de critiques ?**
 --
 
-- Délinquance, immigration, SDF...
+   - Délinquance, immigration, SDF...
 
 ---
 
@@ -779,14 +776,14 @@ Victoria Stodden (2010), "[The Digitization of Science and the Degradation of th
 
 ### La fin de la théorie ?
 
-&gt; Nous pouvons désormais analyser les données sans faire d'hypothèses sur ce qu’elles vont montrer. Nous pouvons jeter les nombres dans le plus grand réseau d’ordinateurs que le monde ait jamais vu et laisser les algorithmes trouver les modèles que la science n’arrivait pas à trouver. &lt;br /&gt;
+&gt; Nous pouvons désormais **analyser les données sans faire d'hypothèses sur ce qu’elles vont montrer**. Nous pouvons jeter les nombres dans le plus grand réseau d’ordinateurs que le monde ait jamais vu et laisser les algorithmes trouver les modèles que la science n’arrivait pas à trouver. &lt;br /&gt;
 &gt; — Chris Anderson, journaliste *Wired Magazine*
 
 &lt;br /&gt;
 
 --
 
-&gt; L’analyse des données est extrêmement utile, mais sa disponibilité croissante risque d’avoir l’effet exactement inverse de celui prédit par Anderson : une floraison de théories. Parce qu’il n’y a pas d’autres façons d’imaginer ce que l’on ne peut pas voir – ce qui constitue le problème principal de la science. &lt;br /&gt;
+&gt; L’analyse des données est extrêmement utile, mais sa disponibilité croissante risque d’avoir **l’effet exactement inverse de celui prédit par Anderson : une floraison de théories**. Parce qu’il n’y a pas d’autres façons d’imaginer ce que l’on ne peut pas voir – ce qui constitue le problème principal de la science. &lt;br /&gt;
 &gt; — Alexandre Delaigue, PRAG économie-gestion à l'Université Lille 1
 
 .footnote[
@@ -833,7 +830,7 @@ class:inverse, middle, center
 
 ---
 
-### Le risque : confondre corrélation et causalité
+### La corrélation n'est pas la causalité
 
 Deux événements (appelons les X et Y) sont corrélés si l’on observe une relation entre les deux. Une erreur de raisonnement courante consiste à dire : « X et Y sont corrélés, donc X cause Y ». On .red[confond corrélation et causalité].
 
@@ -872,7 +869,7 @@ Hal Varian (Chief economist, Google), *The McKinsey Quarterly*, Janvier 2009
 &lt;br /&gt;
 &gt; Je pense que *data scientist* est un terme glamour pour désigner un statisticien.
 
-Nate Silver (2013), "[What I need from statisticians]"(https://www.statisticsviews.com/article/nate-silver-what-i-need-from-statisticians/), *Stats &amp; data science views*
+Nate Silver (2013), "[What I need from statisticians](https://www.statisticsviews.com/article/nate-silver-what-i-need-from-statisticians/)", *Stats &amp; data science views*
 
 ---
 
