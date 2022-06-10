@@ -580,7 +580,7 @@ Des données dotées d'un modèle qui définit les relations entre composants
 
 ** Données capturées**
 
-Observation, enquête, expérimentation, prise de notes, senseurs... dont l'intention première est de générer des données.
+Observation, enquête, expérimentation, prise de notes, capteurs… dont l'intention première est de générer des données.
 
 --
 
@@ -730,7 +730,7 @@ L'analyse du spectre audio permet notamment de prendre en compte les nouvelles c
 ]
 
 .right-column[
-- .red[**Mieux gouverner**] (*governing people*) : dans la continuité de la tradition statistique de l'État, améliorer le service rendu au public, prévenir les crimes et délits…
+- .red[**Gouverner la population**] (*governing people*) : dans la continuité de la tradition statistique de l'État, améliorer le service rendu au public, prévenir les crimes et délits…
 
 - .red[**Gérer les organisations**] (*managing organisations*) : améliorer le fonctionnement des CRM, ERP… pour plus de productivité
 
@@ -798,11 +798,11 @@ Un débat toujours pas tranché
 
 - poussé par le W3C et Tim Berners-Lee
 - sémantique / web des données
-- S'appuyer sur des formats ouverts : RDF / SPARQL
+- s'appuie sur des formats ouverts : RDF / SPARQL
 - Wikidata comme données pivot
 
 .center.reduite3[
-![](http://linkeddata.org/static/images/lod-datasets_2009-07-14_cropped.png)
+![](./img/lod-datasets_2009-07-14_cropped.png)
 ]
 
 ---
@@ -810,7 +810,7 @@ Un débat toujours pas tranché
 ## API
 
 .pull-left[
-- Application programming interface
+- *Application programming interface*
 
 - les machines parlent aux machines
 

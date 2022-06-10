@@ -123,7 +123,7 @@ Selon l'Organisation internationale des migrations, 3108 migrant·e·s ont trouv
 
 
 .footnote[Alberto Cairo, *The functional Art*, 2012 ;
-*The truthful art*, 2016. À retrouver [sur son site web](http://www.thefunctionalart.com/)].
+*The truthful art*, 2016. À retrouver [sur son site web](http://www.thefunctionalart.com/).]
 
 ---
 ## Démarche d'encodage / décodage
@@ -155,7 +155,7 @@ Par conséquent, trois compétences à maîtriser : la donnée, la mise en forme
 Le *New York Times* a publié un article sur l'impact du Covid-19 sur les plus de 65 ans.
 
 .center.reduite[
-![](./img/NYT_omicron.png)
+[![](./img/NYT_omicron.png)](https://www.nytimes.com/2022/05/31/health/omicron-deaths-age-65-elderly.html)
 ]
 
 ???
@@ -235,7 +235,7 @@ Le graphe veut faire passer l'idéer d'un risque systémique ? On ne la voit pas
 ### Choisir le bon niveau de granularité
 
 Le niveau de précision minimale d'une donnée (aussi appelé **.red[granularité]**) peut modifier de façon radicale la lecture d'une phénomènne.
-Dans le cas d'une carte, le choix de l'échelle peut mener à la généralisation de phénomène extrêmement circonscrits (ou inversement) comme le montre cet [exemple sur le blog de Datawrapper](https://blog.datawrapper.de/weekly-chart-europegrowth/)
+Dans le cas d'une carte, le choix de l'échelle peut mener à la généralisation de phénomènes extrêmement circonscrits (ou inversement) comme le montre cet [exemple sur le blog de Datawrapper](https://blog.datawrapper.de/weekly-chart-europegrowth/)
 
 .pull-left[
 ![](./img/Scale1.png)
@@ -333,7 +333,7 @@ Toute carte est une modélisation et donc – par définition – une abstractio
 
 ### 1<sup>er</sup> risque : "l'overplotting"
 
-En statistique, le terme "overplotting" se réfère à l'effet produit par l'intégration d'un trop grand nombre de points de données dans un graph le rendant illisible.
+En statistique, le terme "overplotting" se réfère à l'effet produit par l'intégration d'un trop grand nombre de points de données dans un graph, le rendant illisible.
 
 *Note : c'est un vrai terme de stat, vous pouvez l'utiliser pour vous la jouer.*
 
@@ -371,10 +371,11 @@ La tentation de mêler précision et esthétique peut produire de très beaux gr
 
 --
 
-.center.reduite2[
-[![](./img/NebuleusePublicPrive.png)](https://pegasusdata.com/2012/11/25/opendata-copinage-au-gouvernement-quand-lanalyse-de-reseau-vient-en-aide-au-journalisme-dinvestigation/)
+.center.reduite3[
+[![](./img/NebuleusePublicPrive.png)](./img/NebuleusePublicPrive.png)
 ]
 
+.footnote[Martin Grandjean, *Pegasus Data*]
 ???
 
 Un super papier, un très beau visuel mais un concept tordu
@@ -457,7 +458,7 @@ Pour illustrer la censure en Iran, l'équipe de *Journalism is not a crime* a ad
 
 ---
 
-En proposant de visualiser l'immigration comme des anneaux de croissance plutôt que comme des flux, le designer d'information Pedro Cruz modifie la lecture d'un phénomène, basculant d'un registre visuel de la pression à une référence à la consolidation
+En proposant de visualiser l'immigration comme des anneaux de croissance plutôt que comme des flux, le designer d'information Pedro Cruz modifie la lecture d'un phénomène, basculant d'un registre visuel de la pression à une référence à la consolidation.
 
 .center.reduite[
 [![](./img/ImmigrationTree.jpeg)](https://twitter.com/i/web/status/1010012782253826048)
@@ -627,7 +628,7 @@ L’axe vertical d’un graphique doit toujours commencer à zéro, s’applique
 
 - Choisissez votre département sur la carte
 
-- Sélectionner et copiez le tableau avec l'ensemble des candidats du 1er tour.
+- Sélectionnez et copiez le tableau avec l'ensemble des candidats du 1er tour.
 ]
 
 
@@ -641,7 +642,7 @@ L’axe vertical d’un graphique doit toujours commencer à zéro, s’applique
 ### Atelier sur les résultats de l'élection présidentielle de 2022
 
 .pull-left[
-- Allez sur www.datawrapper.de et cliquez sur "**Start creating**"
+- Allez sur http://www.datawrapper.de et cliquez sur "**Start creating**"
 
 - Collez les données copiées précédemment
 
@@ -649,7 +650,7 @@ L’axe vertical d’un graphique doit toujours commencer à zéro, s’applique
 
 - Cliquez sur "**Add column**"
 
-- Nommer la nouvelle colonne "Parti" et remplissez les cellules de la nouvelle colonne avec le nom des partis politiques
+- Nommez la nouvelle colonne "Parti" et remplissez les cellules de la nouvelle colonne avec le nom des partis politiques
 
 - Cliquez sur "**Proceed**"
 
