@@ -763,6 +763,12 @@ Par rapport à Excel, Datawrapper prend en main et montre les étapes à suivre.
 Autre exemple de carte avec le Géoportail : https://datactivist.coop/kit_bibliotheque_data/kit/docs/diagnostic-de-lenvironnement.html
 
 ---
+
+### Bonus
+
+D'autres jeux de données géographiques à cartographier sont disponibles sur https://www.data.gouv.fr/fr/pages/donnees-geographiques/
+
+---
 class: inverse, center, middle
 
 # Merci !
