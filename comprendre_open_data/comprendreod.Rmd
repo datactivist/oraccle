@@ -1,6 +1,6 @@
 ---
-title: "Comprendre et mettre en œuvre l'open data"
-subtitle: "Formation AAF"
+title: "Comprendre l'open data"
+subtitle: "Formation ORACCLE"
 author: "Samuel Goëta, Anne-Laure Donzel, Clément Mandron, Datactivist"
 date: "`r format(Sys.Date(), '%d %b %Y')`"
 output:
@@ -12,7 +12,7 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 params:
-  event: Formation "comprendre et mettre en œuvre l'open data"
+  event: Formation "Comprendre l'open data"
   slug: aaf
 
 ---
@@ -54,7 +54,10 @@ Les productions de Datactivist sont librement réutilisables selon les termes de
 * Connaître les grands principes de l’ouverture des données
 * Connaître le cadre juridique de l’ouverture des données, de la loi CADA à la loi pour une République numérique
 * Comprendre la place de l’ouverture des données dans la modernisation de l’État (open government et État plateforme)
-* Connaître l’état des lieux de l’open data en 2022, avec ses succès et ses limites
+* Connaître l'open data en 2022 grâce à des cas d'usage
+
+???
+
 * Savoir évaluer le niveau de maturité open data de son organisation : cf. https://airtable.com/shrr389QJ2KHOVfHj 
 
 --
@@ -67,20 +70,46 @@ Voir http://datactivist.coop/oraccle
 Ouvrez la présentation sur votre poste pour pouvoir suivre les liens
 
 ---
+
 class: middle, center
 
-### Avant de commencer
+### Avant de commencer : petit auto-portrait chinois
 
-## Présentons nous
+## Si j'étais une donnée, je serais...
 
 ![](img/pdr.png)
 
 .footnote[[Public Domain Review](https://publicdomainreview.org/collection/engravings-from-a-french-ice-skating-manual-1813)]
 
+
 ---
 class: inverse, center, middle
 
-# Origines et principes de l'open data
+# Rappel (ou non)
+
+---
+
+### Qu'est-ce qu'une donnée ?
+
+--
+
+.left-column[
+![](./img/kitchin.png)
+]
+ 
+ 
+.right-column[
+> *Les données sont généralement comprises comme étant la matière première produite dans l’abstraction du monde en catégories, mesures et autres formes de représentation - nombres, caractères, symboles, images, sons, ondes électromagnétiques, bits - qui constituent les fondations sur lesquelles l’information et le savoir sont créés.*
+
+]
+
+---
+![](./img/pyramide.png)
+
+---
+class: inverse, center, middle
+
+# Origines de l'open data
 
 ---
 
@@ -89,7 +118,7 @@ class: inverse, center, middle
 .reduite.center[![](img/facettes.png)]
 
 --
-Selon vous, quelle facette est-elle la plus porteuse actuellement ?
+Selon vous, quelle facette est la plus proche du projet ORACCLE ?
 
 ---
 ### Open data : un terme récent
@@ -108,6 +137,9 @@ Dans le langage courant, cela fait près de 10 ans que l'ouverture des données 
 #### Une définition juridique des droits de l'usager d'un savoir ouvert
 .reduite[.center[![](img/opendef.png)]]
 
+???
+
+Open définition c'est la définition du mot "open". Licence la plus ouverte
 
 ---
 ### 2007 : [la rencontre de Sebastopol ](https://opengovdata.org/)
@@ -124,12 +156,138 @@ Dans le langage courant, cela fait près de 10 ans que l'ouverture des données 
 .pull-right[
 ![](https://datactivist.coop/dataliteracy/img/photofamille.jpg)
 ]
+
+???
+
+"En décembre 2007, trente penseurs et activistes de l’Internet se sont donné rendez-vous à Sebastopol, au nord de San-Francisco. Leur objectif : définir le concept de données publiques ouvertes et le faire adopter par les candidats à l’élection présidentielle américaine. Les participants à la rencontre de Sebastopol sont issus pour la plupart des mouvements du logiciel et de la culture libres. Ces mouvements se trouvent au cœur de nombreuses innovations dans le domaine de l’informatique et d’Internet ces quinze dernières années.
+
+On compte parmi eux Tim O’Reilly : auteur et éditeur américain, il est souvent à l’avant-garde des mouvements de l’informatique et de l’Internet, de l’open source jusqu’à l’expression même de Web 2.0 qu’il a définie et popularisée. 
+Lawrence Lessig, professeur de droit à l’université de Stanford (Californie) est l’initiateur des licences Creative Commons, fondées sur l’idée du copyleft et de libre diffusion des connaissances.
+Tom Steinberg (initiateur du site FixMyStreet)
+Adrian Holovaty (le fondateur du service d’informations localisées EveryBlock)
+Aaron Swartz, inventeur du système de flux RSS et militant de la connaissance libre
+
+La contribution de Tim O’Reilly sur l’open government fait apparaître en pleine lumière la filiation entre le monde du « libre » et les principes émergents de l’open data : il s’agit clairement, explique-t-il, d’appliquer aux affaires publiques les principes de l’open source et ses méthodes de travail.
+
+En 2007, cela pouvait apparaître comme un rêve. Mais le résultat a dépassé leurs espérances. Un peu plus d’un an plus tard, le président Barack Obama prend ses fonctions à la Maison-Blanche et signe trois mémorandums présidentiels. Deux d’entre eux concernent l’open government, dont l’open data est l’un des piliers. Les mémos du président placent explicitement l’action publique sous le signe de la culture de l’open source, en se réclamant de ses principes : « transparence, participation et collaboration »."
+
 ---
 class:middle, center
 ![](https://datactivist.coop/dataliteracy/img/session.jpg)
 # Revue des principes
 
 ---
+### 2008 : Tim Berners-Lee ["Raw data now"](https://www.ted.com/talks/tim_berners_lee_on_the_next_web?language=fr)
+#### La demande de données brutes sous les projecteurs
+
+.reduite[.center[
+![](img/ted.png)
+]]
+
+???
+
+???
+
+Principal inventeur du WWW. 
+L’ouverture est enfin une injonction adressée aux détenteurs de données, tant publics que privés. Sur la scène de la conférence TED de 2009, Sir Tim Berners-Lee, l’inventeur des liens hypertextes et par extension du Web, pousse un cri de ralliement (pour les partisans d’un Web des données) et un cri de guerre aux détenteurs de données : « We want raw data, now ! » (vidéo: Tim Berners-Lee, TED, 2009). il encourage l'ensemble du monde à libérer leurs données afin de les connecter entre elles
+
+---
+### 2010 : [le modèle en 5 étoiles de Tim Berners-Lee](https://5stardata.info/fr/)
+
+.reduite[.center[![](./img/5star.png)]]
+
+---
+
+### Un exemple de linked data : [Wikidata, le Wikipédia des données](https://www.wikidata.org/wiki/Wikidata:Main_Page)
+
+.reduite[.center[![](./img/wikidata.png)]]
+
+???
+
+Université Paris Nord
+HAL structure ID
+
+SELECT ?item ?itemLabel ?countryLabel ?country 
+WITH {    select distinct ?item {?item wdt:P31/wdt:P279* wd:Q3918} } AS %results  
+WHERE {   INCLUDE %results.   ?item wdt:P17 ?country.?country wdt:P463 wd:Q458 .      SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }  }
+
+https://query.wikidata.org/#SELECT%20%3Fitem%20%3FitemLabel%20%3FcountryLabel%20%3Fcountry%20%0AWITH%20%7B%20%20%20%20select%20distinct%20%3Fitem%20%7B%3Fitem%20wdt%3AP31%2Fwdt%3AP279%2a%20wd%3AQ3918%7D%20%7D%20AS%20%25results%20%20%0AWHERE%20%7B%20%20%20INCLUDE%20%25results.%20%20%20%3Fitem%20wdt%3AP17%20%3Fcountry.%3Fcountry%20wdt%3AP463%20wd%3AQ458%20.%20%20%20%20%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%20%20%7D
+
+---
+### 2011 : [la déclaration pour un gouvernement ouvert](https://www.opengovpartnership.org/fr/process/joining-ogp/open-government-declaration/)
+
+.reduite[.center[![](img/declaration.png)]]
+
+---
+
+---
+## Des principes techniques sans portée politique
+>"Il peut être vrai en un sens qu'un régime devient plus ouvert chaque fois qu'il fournit des données ouvertes supplémentaires, même pour les sujets banals et apolitiques, mais il est facile d'imaginer qu'un régime fermé pourrait divulguer de grandes quantités de données conformes à ces huit exigences [de Sébastopol] **sans pour autant accroître sa responsabilité réelle en tant que gouvernement **. 
+
+> Une diffusion électronique des déclarations de propagande faites par les dirigeants politiques de la Corée du Nord, par exemple, pourrait satisfaire à ces huit exigences et ne pas promouvoir une transparence ou une responsabilité supplémentaires de la part d'un régime notoirement fermé et opaque."
+
+>Yu & Robinson (2012) « [The New Ambiguity of Open Government](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2012489) » 
+
+
+---
+### Depuis 2010 : l'ère des classements
+[![](img/odb.png)](https://opendatabarometer.org/)
+
+???
+
+"https://opendatabarometer.org/?_year=2017&indicator=ODB
+Evalue comment les Etats publient et utilisent les données ouvertes pour la reddition de compte, l'innovation l'impact social."
+
+---
+### Depuis 2010 : l'ère des classements
+[![](img/godi.png)](https://index.okfn.org/place/)
+
+???
+"https://index.okfn.org/place/
+Classement qui évalue l'ouverture selon les catégorie de données. Les données les plus opaques : les dépenses du gouvernement et la propriété foncière"
+
+---
+### 2013 : la [charte du G8 sur l'open data](https://www.modernisation.gouv.fr/sites/default/files/fichiers-attaches/charte-g8-ouverture-donnees-publiques-fr.pdf)
+
+![](img/g8.jpg)
+???
+
+"Le 18 juin 2013, les chefs d'État du G8 ont adopté et signé une Charte du G8 pour l'ouverture des données publiques3 ;
+
+Y participent la Fr, l'All, l'Italie, le RU, le Japon, la Russie, le Canada, les USA
+
+Dans un esprit d'ouverture et de transparence, cette charte pose les principes d'une donnée publique à désormais considérer comme « ouvertes par défaut »4 (sauf cas particulier liés à la défense et à la sécurité) ; cette donnée doit être mise à disposition « de qualité et en quantité ; accessibles et réutilisables par tous », gratuitement et avec une libre réutilisation pour tous3.
+
+Les formats ouverts et non-propriétaires seront privilégiés et la charte encourage l’accès de tous à cette information, tout en promouvant l'innovation (entrepreneuriale, citoyenne et sociale)3.
+
+Elle engage les États signataires à produire un « plan d'action national » avant fin 2013, et à mettre en œuvre (dans les 2 ans qui suivent (avant la fin 2015) tous les engagements collectifs détaillés dans l'annexe technique jointe à la charte
+
+
+---
+### 2015 : la [charte internationale de l'open data]()
+.reduite[.center[
+![](img/odcharter.png)
+]]
+
+
+???
+
+"Les données ouvertes sont des données numériques accessibles dont les caractéristiques techniques et juridiques permettent la libre utilisation, réutilisation et redistribution par quiconque, en tout temps, en tout lieu.
+1. Des données ouvertes par défaut
+2. Des données diffusées en temps opportun et exhaustives
+3. Des données accessibles et utilisables
+4. Des données comparables et interopérables
+5. Des données servant à l’amélioration de la gouvernance et de la participation citoyenne
+6. Des données favorisant le développement inclusif et l’innovation
+100 gouvernements ont adopté le texte : vingtaine de pays, reste ville ou local"
+
+---
+class: inverse, center, middle
+
+# Les 8 principes de l'open data
+
+---
+
 class: middle, center
 
 # 1. Des données complètes
@@ -177,50 +335,11 @@ class: middle, center
 class: middle, center
 
 # 8. Des données dans une licence ouverte
-### Idéalement dans le domaine public sinon dans une licence conforme à l'[Open Definition](www.opendefinition.org) : Licence Ouverte (CC-BY) ou ODBL (CC-BY-SA)
+### Idéalement dans le domaine public sinon dans une licence conforme à l'[Open Definition](https://opendefinition.org/od/2.1/en/) : Licence Ouverte (CC-BY) ou ODBL (CC-BY-SA)
 
 ---
-### 2008 : Tim Berners-Lee ["Raw data now"](https://www.ted.com/talks/tim_berners_lee_on_the_next_web?language=fr)
-#### La demande de données brutes sous les projecteurs
-
-.reduite[.center[
-![](img/ted.png)
-]]
----
-### 2010 : [le modèle en 5 étoiles de Tim Berners-Lee](https://5stardata.info/fr/)
-
-.reduite[.center[![](./img/5star.png)]]
-
----
-## Des principes techniques sans portée politique
->"Il peut être vrai en un sens qu'un régime devient plus ouvert chaque fois qu'il fournit des données ouvertes supplémentaires, même pour les sujets banals et apolitiques, mais il est facile d'imaginer qu'un régime fermé pourrait divulguer de grandes quantités de données conformes à ces huit exigences [de Sébastopol] **sans pour autant accroître sa responsabilité réelle en tant que gouvernement **. 
-
-> Une diffusion électronique des déclarations de propagande faites par les dirigeants politiques de la Corée du Nord, par exemple, pourrait satisfaire à ces huit exigences et ne pas promouvoir une transparence ou une responsabilité supplémentaires de la part d'un régime notoirement fermé et opaque."
-
->Yu & Robinson (2012) « [The New Ambiguity of Open Government](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2012489) » 
-
----
-### 2011 : [la déclaration pour un gouvernement ouvert](https://www.opengovpartnership.org/d-claration-commune-pour-un-gouvernement-ouvert)
-
-.reduite[.center[![](img/declaration.png)]]
-
----
-### Depuis 2010 : l'ère des classements
-[![](img/odb.png)](https://opendatabarometer.org/)
-
----
-### Depuis 2010 : l'ère des classements
-[![](img/godi.png)](https://index.okfn.org/place/)
-
----
-### 2013 : la [charte du G8 sur l'open data](https://www.modernisation.gouv.fr/sites/default/files/fichiers-attaches/charte-g8-ouverture-donnees-publiques-fr.pdf)
-
-![](img/g8.jpg)
----
-### 2015 : la [charte internationale de l'open data]()
-.reduite[.center[
-![](img/odcharter.png)
-]]
+class: center, middle
+![](./img/wooclap1.png)
 
 ---
 class: inverse, center, middle
@@ -247,10 +366,17 @@ Je n'indique ici que quelques éléments généraux sur le cadre juridique, ce g
 
 .footnote[Il faudrait maintenant désigner la loi comme le Code des relations entre le public et l'administration (CRPA) qui, dans son [livre 3](https://www.legifrance.gouv.fr/affichCode.do;jsessionid=BDF8EC0BD562E214CCD9A5ADD435D690.tplgfr42s_1?idSectionTA=LEGISCTA000031367685&cidTexte=LEGITEXT000031366350&dateTexte=20190429), codifie le droit d'accès et de réutilisation mais il est encore moins connu que la loi CADA…]
 
+???
+
+Aux Etats-Unis, après le Freedom of Information Act de 1966 oblige les agences fédérales à transmettre les documents classifiés à tout citoyen qui en fait la demande. En France, la Commission d'accès aux documents administratifs, CADA, créée en 1976 fait de même. Mais il n'y a pas si longtemps, les citoyens qui s'adressaient à la CADA étaient soumis à de fastidieuses procédures administratives et l'attente d'une réponse était très longue... 
+
 ---
 ### La loi CADA : un point noir dans la transparence de la vie publique
 
 Même si la France est le 3e pays à avoir adopté un droit d'accès, la loi CADA n'est pas un outil fort de la transparence de la vie publique. Ses principaux défauts : l'absence de sanctions et une procédure longue qui décourage les demandeurs et favorise le contournement par les administrations. 
+
+<BR>
+
 [![](./img/europam.png)](http://europam.eu/?module=country-profile&country=France)
 
 ---
@@ -266,6 +392,10 @@ L'open data est comme la Tour de Pise : un très bel édifice posé sur des fond
 .pull-right[
 [![](./img/rti.png)](https://www.rti-rating.org/country-data/)
 ]
+
+???
+
+La notation RTI (Rght to information) est le principal outil mondial pour évaluer la solidité des cadres juridiques nationaux d'accès aux informations détenues par les autorités publiques (ou le droit à l'information, RTI). Il est largement utilisé par les organisations intergouvernementales, les défenseurs de la RTI, les réformateurs, les législateurs et autres.
 
 ---
 ### Les conditions d'exercice du droit d'accès
@@ -292,6 +422,11 @@ faisant apparaître un comportement d'une personne pouvant lui porter préjudice
 
 Le document ne peut être publié qu'après avoir fait l'objet d'un traitement permettant
 d'.red[**occulter les mentions protégées**]. L’administration n’est pas tenue de publier un document lorsque “les travaux d’occultation dénatureraient ou videraient de sens le document” ou si “le document est indivisible ou l’occultation est trop complexe”.
+
+???
+
+Du large au particulier (à vérifier dans l'ordre)
+
 ---
 ### Le cas des données personnelles
 
@@ -305,36 +440,18 @@ La mise en ligne de données à caractère personnel sans anonymisation n'est pe
 
 Hors de ces cas, il faut .red[**[anonymiser les données](https://github.com/SGMAP-AGD/anonymisation/wiki/Guide-de-l'anonymisation)**] : elles ne doivent plus se référer à une personne réelle (exit les noms, identifiants…) et ne doivent plus être spécifiques à un individu mais communes à un ensemble de personnes. L’indexation de ces données par un moteur de recherche externe est proscrite.
 
+???
+
+"La base de données publique Transparence - Santé rend accessible l'ensemble des informations déclarées par les entreprises sur les liens d'intérêts qu'elles entretiennent avec les acteurs du secteur de la santé.
+
+article D312-3-1 du CRPA : code des relations entre le public et l'administration
+les organigrammes, les annuaires des administrations et la liste des personnes inscrites à un tableau d'avancement ou sur une liste d'aptitude pour l'accès à un échelon, un grade ou un corps ou cadre d'emplois de la fonction publique ;
+Les résultats obtenus par les candidats aux examens et concours administratifs ou conduisant à la délivrance des diplômes nationaux"
 
 ---
-### Du droit d'accès au droit de réutilisation
 
-Alors qu'aux Etats-Unis les données publiques sont placées dans le domaine public depuis les années 70, la question de la réutilisation des données publiques a émergé en France et en Europe dans les années 1990 avec le développement d'Internet facilitant la diffusion des données publiques et le développement de nouveaux services au public. Quelques jalons :
-
-```{r echo=FALSE}
-library(timevis)
-data <- data.frame(
-  id      = 1:7,
-  content = c("Loi CADA","Directive PSI", "Directive INSPIRE", "Révision de la directive PSI", "Loi Notre", "Loi Valter", "Loi pour une République Numérique"),
-  start   = c("1978-07-17","2003-11-17", "2007-03-14","2013-06-13","2015-08-07","2015-12-28","2016-10-07")
-)
-timevis(data, loadDependencies = FALSE, width = "715px", height = "350px")
-```
----
-
-### Le droit de réutilisation en archives
-
-La .red[**réutilisation des informations publiques**] désigne l'utilisation de documents ou de données par un tiers, pour d’autres fins que celles pour lesquelles ils ont été produits ou reçus initialement.
-
-Les .red[**informations publiques**] sont tous les documents sauf ceux couverts par un délai de communicabilité et ceux sur lesquels des tiers détiennent des droits de propriété intellectuelle.
-
-Un principe : la .red[**gratuité de la réutilisation**] mais avec des exceptions, notamment lorsque la réutilisation porte sur :
-> *Des informations issues des opérations de numérisation des fonds et des collections [...] des archives et, le cas échéant, sur des informations qui y sont associées lorsque ces dernières sont commercialisées conjointement.* 
-
-Les licences :
-* Si gratuité : licence facultative (à choisir dans une liste fixée par l'Etat)
-* Si redevance : licence obligatoire
-
+class: center, middle
+![](./img/anonymisation.png)
 ---
 
 ### Loi pour une République Numérique : l'ouverture des données par défaut
@@ -394,12 +511,84 @@ Utiliser une autre licence impose une **homologation** auprès de la DINSIC avec
 [![](./img/licences.png)](http://www.opendatalab.fr/index.php/laboratoire/le-kit-collectivites)
 ]
 .footnote[source : [SGAR Occitanie](http://www.opendatalab.fr/index.php/laboratoire/le-kit-collectivites)]
+
+---
+### Du droit d'accès du droit de réutilisation
+
+.reduite.center[
+[![](./img/frise.png.png)](https://datactivist.coop/ardeche/rapport/partie2.html)
+]
+
+???
+
+Révision PSI 2007 données géogpraphique systèmes d'information, des sols, etc...
+
+---
+class: center, middle
+
+![](./img/giphy.gif)
+
+
+
 ---
 class: inverse, center, middle
 
-# Où en est l'open data ?
+# Où en est l'open data en 2022 ?
 
 ---
+
+### Le cadre juridique européen à venir
+
+Le [Data Governance Act (DGA)](https://en.wikipedia.org/wiki/Data_Governance_Act) proposé par la commission en 2020 et adopté récemment induit de nouvelles notions : 
+
+* Altruisme des données (entreprises privées, open data et individus) : mise à disposition de données au service de l'intérêt général [Les cahiers de l'observatoire DataPublica](https://www.data-publica.eu/portfolio/items/premier-cahier-de-l-observatoire)
+* Services d'intermédiation de données : qui fournira un environnement sécurisé dans lequel les entreprises ou les particuliers pourront partager des données. [Conseil de l'UE](https://www.consilium.europa.eu/en/press/press-releases/2022/05/16/le-conseil-approuve-l-acte-sur-la-gouvernance-des-donnees/)
+* Espaces de données personnelles
+* etc...
+
+#### En France, on parle de plus en plus de Données d'Intérêt Général : 
+
+"Certaines données, bien que pas nécessairement produites ou détenues par la puissance publique, présentent un intérêt tel qu’elles justifient que la puissance publique puisse y accéder" [Joël Gombin sur #TeamOpenData](https://teamopendata.org/t/donnees-dinteret-general-donnees-de-reference-donnees-essentielles/1066)
+
+---
+class: center, middle
+
+### Les données d'intérêt général
+
+
+
+
+![](./img/dig.png)
+<BR>
+[Les cahiers de l'observatoire DataPublica](https://www.data-publica.eu/portfolio/items/premier-cahier-de-l-observatoire)
+
+---
+
+class: center, middle
+
+![](./img/wooclap2.png)
+
+???
+www.wooclap.com/YMPDCA
+
+
+---
+
+class: center, middle
+
+### Les données d'intérêt général
+
+![](./img/amdac1.png)
+
+![](./img/amdac2.png)
+
+<BR>
+[Feuille de route AMDAC du Ministère de l'Éducation Nationale et de la Jeunesse](https://static.data.gouv.fr/resources/feuilles-de-route-ministerielles-sur-la-politique-de-la-donnee-des-algorithmes-et-des-codes-sources/20220411-140150/pour-une-politique-de-la-donn-e-ambitieuse-au-service-de-l-cole-de-la-jeunesse-et-des-sports-104165.pdf)
+
+
+---
+
+
 ### Des politiques d'open data "de l'offre"
 
 .pull-left[
@@ -575,58 +764,6 @@ Un projet mélant open data et indexation collaborative
 
 ---
 
-class:inverse, center, middle 
-
-### A la semaine prochaine !
-
----
-class:inverse, center, middle 
-
-### Pour commencer
-
-### Le témoignage d'une archiviste impliquée dans un projet d'open data
-
-[Lien vers la vidéo](https://www.dropbox.com/s/y7wlk4gtjca15bl/Entretien%20Severine%20Menet.mp4?dl=0)
-
----
-
-class: inverse, center, middle
-
-### Le schéma de registre des entrées d'archives
-
----
-
-### C'est quoi un schéma de données ?
-
----
-
-### Les objectifs d'un standard de données
-
-* Convertir les données dans un format ouvert (spécifications techniques publiques et sans restriction d'accès ni de mise en œuvre) et lisible par les machines
-
-* Adopter des spécifications partagées : GTFS, DECP, IATI, OCDS, socle commun des données locales…
-
-* Transformer les données
-
-.red[Bonne nouvelle : il existe désormais un standard pour la publication des registres d'entrées d'archives!]
-
-]
-
----
-
-### Pourquoi ce standard?
-
-* De nombreux services avaient publié leurs entrées mais...
-
-![](img/standard.png)
----
-
-class: inverse, center, middle
-
-# A vous de jouer !
-
----
-
 class: inverse, center, middle
 
 # Ressources
@@ -669,3 +806,4 @@ class: inverse, center, middle
 # Merci !
 
 Contact : [samuel@datactivist.coop](mailto:samuel@datactivist.coop) [annelaure@datactivist.coop](mailto:annelaure@datactivist.coop)
+[clement@datactivist.coop](mailto:clement@datactivist.coop)
