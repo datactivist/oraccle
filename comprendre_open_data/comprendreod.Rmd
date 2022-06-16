@@ -13,7 +13,7 @@ output:
       countIncrementalSlides: false
 params:
   event: Formation "Comprendre l'open data"
-  slug: aaf
+  slug: oraccle
 
 ---
 layout: true
@@ -761,6 +761,28 @@ Ce jeu de données contient plus de 6000 marchés publics attribués par l'Etat.
 Un projet mélant open data et indexation collaborative
 
 ![](img/hautsdeseine.png)
+---
+
+class: inverse, center, middle
+
+# Découverte de l'open data éducatif et universitaire !
+
+
+---
+
+class: center, middle
+
+### À vous jouer !
+
+
+![](./img/tape.gif)
+
+
+
+https://padlet.com/datactivist/s1rr2f8nket84f6j 
+
+
+
 
 ---
 
