@@ -765,7 +765,7 @@ Un projet mélant open data et indexation collaborative
 
 class: inverse, center, middle
 
-# Découverte de l'open data éducatif et universitaire !
+# Découverte de l'open data universitaire !
 
 
 ---
