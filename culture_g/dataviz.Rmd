@@ -458,11 +458,15 @@ Pour illustrer la censure en Iran, l'équipe de *Journalism is not a crime* a ad
 
 ---
 
-En proposant de visualiser l'immigration comme des anneaux de croissance plutôt que comme des flux, le designer d'information Pedro Cruz modifie la lecture d'un phénomène, basculant d'un registre visuel de la pression à une référence à la consolidation.
+En proposant de visualiser l'immigration comme des anneaux de croissance plutôt que comme des flux, le chercheur en design d'information Pedro Cruz modifie la lecture d'un phénomène, basculant d'un registre visuel de la pression à une référence à la consolidation.
 
 .center.reduite[
-[![](./img/ImmigrationTree.jpeg)](https://twitter.com/i/web/status/1010012782253826048)
+[![](./img/ImmigrationTree.jpeg)](https://web.northeastern.edu/naturalizing-immigration-dataviz//)
 ]
+
+--
+A cartogram of tree rings for the 50 states, showing immigration and natural-borns. Each cell corresponds to 150 people. Assembled by Steve Costa.
+
 
 ---
 
