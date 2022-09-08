@@ -8,7 +8,7 @@ ORACCLE a confié à Datactivist le soin de sensibiliser et former les membres d
 ***
 # Programme session automne 2022
 
-| Date | Titre | Intervenant·e·s | Lien d'inscription | Supports
+| Date | Titre (et descriptif en cliquant) | Intervenants | Lien d'inscription | Supports
 | :---: | :--- | :---: | :---: | :---|
 | `26-09-2022` | *Culture générale des données* et *Culture générale de la visualisation de données* | Antoine Blanchard ([Datactivist](http://datactivist.coop/)) | [matin](https://evento.renater.fr/survey/26-09-2022-sensibilisation-a-l-open-data-explorer-le-potentiel-de-la-donnee-sof5o22s) <br />[après-midi](https://evento.renater.fr/survey/26-09-2022-outils-et...-jg9ax3wf) | [diaporama #1](http://datactivist.coop/oraccle/culture_g/donnees.html) <br />[diaporama #2](http://datactivist.coop/oraccle/culture_g/dataviz.html) |
 | `03-10-2022` | *Comprendre l'open data* et *Les étapes de l'ouverture des données* | Clément Mandron ([Datactivist](http://datactivist.coop/)) | [matin](https://evento.renater.fr/survey/03-10-2022-sensibilisation-a-l-open-data-comprendre-l-open-data-cadre-theorique-et-legal-alznphyz) <br />[après-midi](https://evento.renater.fr/survey/03-10-2022-sensibilisation-a-l-open-data-etapes-de-l-ouverture-7y8xt83x) | [diaporama #1](https://datactivist.coop/oraccle/comprendre_open_data/comprendreod.html) <br />[diaporama #2](http://datactivist.coop/oraccle/open_data_pipeline) <br/> [guide Open data pipeline](https://docs.google.com/presentation/d/1BR0tYG2uYfA3tSkbxtPXSiY2h_iMsHynzoQDbRJ7OLo/edit?usp=sharing) |
@@ -21,7 +21,7 @@ ORACCLE a confié à Datactivist le soin de sensibiliser et former les membres d
 
 # Programme session printemps-été 2022
 
-| Date | Titre | Intervenant·e·s | Supports
+| Date | Titre | Intervenants | Supports
 | :---: | :--- | :---: | :---|
 | `31-05-2022` | *Les étapes de l'ouverture des données* | Antoine Blanchard ([Datactivist](http://datactivist.coop/)) | [diaporama](http://datactivist.coop/oraccle/open_data_pipeline) <br/> [guide](https://docs.google.com/presentation/d/1BR0tYG2uYfA3tSkbxtPXSiY2h_iMsHynzoQDbRJ7OLo/edit?usp=sharing) |
 | `10-06-2022` | *Culture générale des données et de la visualisation de données* | Antoine Blanchard ([Datactivist](http://datactivist.coop/)) | [diaporama #1](http://datactivist.coop/oraccle/culture_g/donnees.html) <br /> [définition de "données"](http://datactivist.coop/oraccle/culture_g/Definitions_donnees.pdf)<br /> [diaporama #2](http://datactivist.coop/oraccle/culture_g/dataviz.html) |
