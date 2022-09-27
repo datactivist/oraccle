@@ -626,18 +626,20 @@ Exemple : https://www.data.gouv.fr/en/datasets/metadonnees-des-publications-de-l
 ### Exemples de données ouvertes
 
 .pull-left[
-[![](./img/scolarite_paris13.png)](https://www.data.gouv.fr/fr/datasets/donnees-de-scolarite-de-luniversite-paris-13/)
+
+[![](./img/OF_paris_nanterre.png)](https://opendata.hauts-de-seine.fr/explore/dataset/offre-de-formation-de-luniversite/information/)
+
+[![](./img/origine_etudiants_paris_nanterre.png)](https://opendata.hauts-de-seine.fr/explore/dataset/origine-geographique-des-etudiants-inscrits-a-luniversite/information/?disjunctive.diplome_type&disjunctive.composante)
 
 [![](./img/etudiants_inscrits_paris_nanterre.png)](https://opendata.hauts-de-seine.fr/explore/dataset/evolution-du-nombre-detudiants-inscrits-et-dinscriptions-depuis-la-rentree-unive/information/)
  
 ]
 
 .pull-right[
-[![](./img/OF_paris_nanterre.png)](https://opendata.hauts-de-seine.fr/explore/dataset/offre-de-formation-de-luniversite/information/)
+[![](./img/scolarite_paris13.png)](https://www.data.gouv.fr/fr/datasets/donnees-de-scolarite-de-luniversite-paris-13/)
 
-[![](./img/origine_etudiants_paris_nanterre.png)](https://opendata.hauts-de-seine.fr/explore/dataset/origine-geographique-des-etudiants-inscrits-a-luniversite/information/?disjunctive.diplome_type&disjunctive.composante)
+[![](./img/ARES_portail_ODWB.png)](https://www.odwb.be/explore/dataset/ares-saturn-2/information/)
 ]
-
 ---
 ### .red[Mettre à jour]
 
@@ -659,7 +661,7 @@ Exemple : https://www.data.gouv.fr/en/datasets/metadonnees-des-publications-de-l
 
 ???
 
-Retours des usagers : valeurs erronées, modèle de données, documentation incomplète ou erronnée. L’ouverture des données est une démarche d’amélioration continue. 
+Retours des usagers : valeurs erronées, modèle de données, documentation incomplète ou erronée. L’ouverture des données est une démarche d’amélioration continue. 
 
 ---
 
