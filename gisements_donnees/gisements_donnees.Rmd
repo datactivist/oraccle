@@ -66,7 +66,6 @@ Voir <http://datactivist.coop/oraccle>
 ### Au programme de l'introduction
 
 * Présentation de la méthodologie
-* Rappels : qu'est-ce qu'une donnée ? un jeu de donnée ?
 * La réutilisation des données : un parcours du combattant
 * Intervention de Pierre Boudes : les objectifs d'ORACCLE
 
